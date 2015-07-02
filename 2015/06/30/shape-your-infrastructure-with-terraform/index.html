@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+<title>Codurance - Shape your infrastructure with Terraform</title>
+ <!-- Meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Open Graph tags - Used when publishing on Facebook -->
+<meta property="og:site_name" content="Codurance"/>
+<meta property="og:description" content="We build well-crafted software"/>
+<meta property="og:url" content="http://codurance.com"/>
+<meta property="og:image" content="http://codurance.com/assets/img/codurance.png"/>
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="/assets/img/favicon.ico">
+
+<!-- CSS Global Compulsory -->
+<link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="/assets/css/style.css">
+
+<!-- CSS Implementing Plugins -->
+<link rel="stylesheet" href="/assets/plugins/line-icons/line-icons.css">
+<link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
+
+<!-- CSS Theme -->
+<link rel="stylesheet" href="/assets/css/plugins.css">
+<link rel="stylesheet" href="/assets/css/app.css">
+<link rel="stylesheet" href="/assets/css/theme-colors/orange.css" id="style_color">
+
+<!-- CSS Customization -->
+<link rel="stylesheet" href="/assets/css/custom.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/idea.min.css">
+<!--fonts -->
+<link href='http://fonts.googleapis.com/css?family=Oxygen:700,400' rel='stylesheet' type='text/css'>
+
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-46289079-1', 'codurance.com');
+    ga('send', 'pageview');
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body>
+
+<div class="wrapper">
+<!--=== Header ===-->
+<div class="header-v3 header-sticky">
+        <!-- Navbar -->
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">
+                        <img id="logo-header" src="/assets/img/codurance.png" height="45px;" alt="Logo">
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-responsive-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/casestudies">Case Studies</a></li>
+                        <li><a href="/videos">Videos</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/careers/craftsman">Careers</a></li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">About Us <i class="icon-angle-down">&nbsp;</i></a><ul class="dropdown-menu">
+                            <li><a href="/aboutus/ourteam">Our Team</a></li>
+                            <li><a href="/aboutus/ourcompany">Our Company</a></li>
+                            <li><a href="/aboutus/ourpractices">Our Practices</a></li>
+                        </ul></li>
+                    </ul>
+                </div><!--/navbar-collapse-->
+            </div>    
+        </div>            
+        <!-- End Navbar -->
+    </div>
+    <!--=== End Header ===--> 
+<!--=== End Header ===-->
+
+
+    <div class="breadcrumbs margin-bottom-10">
+        <div class="container">
+            <h2 class="pull-left">Shape your infrastructure with Terraform</h2>
+            <ul class="pull-right breadcrumb">
+                <li><a href="/">Home</a></li>
+                
+                    <li>
+                    
+                        <a href="/blog">Blog</a>
+                    
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+
+<div class="container">
+<div class="row blog-page blog-item">
+<!-- Left Sidebar -->
+<div class="col-md-9 md-margin-bottom-60">
+    <!--Blog Post-->
+    <div class="blog margin-bottom-40">
+        
+        <div class="blog-post-tags">
+            <ul class="list-unstyled list-inline blog-info">
+                <li><i class="fa fa-calendar"></i> 30 Jun 2015</li>
+                <li><i class="fa fa-pencil"></i> Robert Firek</li>
+                <li class="blog-share-buttons">
+                  <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+                  <script type="IN/Share"></script>
+
+                  <a class="twitter-share-button"
+                      href="https://twitter.com/intent/tweet?url=http://www.codurance.com/2015/06/30/shape-your-infrastructure-with-terraform/"
+                      data-count="none">
+                      Tweet</a>
+                </li>
+            </ul>
+        </div>
+        
+
+        
+            <img class="img-responsive thumbnail blog-post-image" src="/assets/img/custom/blog/terraform/TerraformedMoonFromEarth.jpg" alt="Shape your infrastructure with Terraform">
+        
+
+        <p>The popularity of cloud infrastructure services has hugely increased over the last few years. Companies value the flexibility and reliability provided by such services. The simplicity of the solutions delivered by cloud providers should remove the burden from the shoulders of busy Dev and Ops people and give the possibility to focus on real customer's needs.</p>
+
+<p>Unfortunately the reality is not necessarily so simple. When you start your journey in the cloud you will discover new challenges. One of these challenges will be connected with the creation and provisioning of your new infrastructure. Simple structures can be created within minutes using web pages or a CLI, but these are not the best ways to create a cloud with 100 machines.</p>
+
+<p>AWS provides many different interfaces which allow automation of an infrastructure process. You can use a REST API or CLI to create your own script. This is probably the most flexible solution, but at the same time it can be time consuming.</p>
+
+<p><a href="https://terraform.io/">Terraform</a> from HashiCorp can give you similar flexibility and at the same time you don't have to spend weeks to write bash or python scripts to provision your cloud.</p>
+
+<h2>Terraform for the rescue - plan, apply, update, destroy.</h2>
+
+<h3>Plan</h3>
+
+<h4>Infrastructure diagram</h4>
+
+<p><img class="img-responsive blog-post-image" src="/assets/img/custom/blog/terraform/ShapeYourInfrastructure_VPC.png" />To demonstrate the use of Terraform we need to introduce some example infrastructure: let's provision a structure which will support a simple web service running in AWS. This web service will expose an API via a web proxy server. The service also requires a database and this database should have a separate EC2 instance to ease database maintenance. Instances responsible for business logic will be hidden in a private subnet and only the web proxy
+server will be available to the wider internet. At the same time our service needs to connect to external resources - therefore a NAT instance will take the responsibility of managing network connections from within the private subnet. All of these resources will constitute a single <a href="http://aws.amazon.com/vpc/">Virtual Private Cloud</a> (VPC).</p>
+
+<h4>Provider</h4>
+
+<p>We are now ready to introduce Terraform. We need to create configuration files which will describe components required to build our infrastructure. Configuration files can be written in <a href="https://terraform.io/docs/configuration/">HashiCorp Configuration Language</a> (similar to YAML) or JSON. All configuration files should have extension <strong><em>.tf</em></strong> and be stored in the same directory. Terraform automatically combines all resources defined in <strong><em>.tf</em></strong> files.</p>
+
+<p>Before we add any resource we have know where our resources are going to exist. To do that we have to create a <em>provider</em> definition.</p>
+
+<p>Terraform's provider is the mechanism used for managing resources, in our case we'll use the AWS provider. Our first configuration file might look like this:</p>
+
+<p><strong><em>provider-config.tf</em></strong></p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">provider</span> <span class="s2">&quot;aws&quot;</span> <span class="p">{</span>
+    <span class="nx">access_key</span> <span class="o">=</span> <span class="s2">&quot;ACCESS_KEY_HERE&quot;</span>
+    <span class="nx">secret_key</span> <span class="o">=</span> <span class="s2">&quot;SECRET_KEY_HERE&quot;</span>
+    <span class="nx">region</span>     <span class="o">=</span> <span class="s2">&quot;eu-west-1&quot;</span>
+<span class="p">}</span></code></pre></div>
+
+
+<p>Obviously we don't want to keep our secrets in a file which will potentially be stored in version control.
+We also want to have flexibility when we define a region in which we want to provision our environment. Terraform gives us the possibility to introduce variables.</p>
+
+<p>First we have to declare the variables we want to use (see <strong><em>provider-variables.tf</em></strong>). The variables declaration introduces names, structure and default values for all variables used in the configuration file. We will override these default values later.</p>
+
+<p><strong><em>provider-variables.tf</em></strong></p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">variable</span> <span class="s2">&quot;provider&quot;</span> <span class="p">{</span>
+    <span class="k">default</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nx">access_key</span> <span class="o">=</span> <span class="s2">&quot;not undefined yet&quot;</span>
+        <span class="nx">secret_key</span> <span class="o">=</span> <span class="s2">&quot;not undefined yet&quot;</span>
+        <span class="nx">region</span>     <span class="o">=</span> <span class="s2">&quot;not undefined yet&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+
+<p>Now we can update <strong><em>provider-config.tf</em></strong>.</p>
+
+<p><strong><em>provider-config.tf</em></strong></p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">provider</span> <span class="s2">&quot;aws&quot;</span> <span class="p">{</span>
+    <span class="nx">access_key</span> <span class="o">=</span> <span class="s2">&quot;${var.provider.access_key}&quot;</span>
+    <span class="nx">secret_key</span> <span class="o">=</span> <span class="s2">&quot;${var.provider.secret_key}&quot;</span>
+    <span class="nx">region</span>     <span class="o">=</span> <span class="s2">&quot;${var.provider.region}&quot;</span>
+<span class="p">}</span></code></pre></div>
+
+
+<h4>VPC</h4>
+
+<p>When we know how to connect to our provider we can introduce resources. A resource definition in Terraform contains information about the type of a resource and its name. Types of resources are predefined by Terraform and represent building elements which we can instantiate in the cloud. Each resource also has a predefined set of config properties which describe the resource in detail. For a full list of supported AWS resource types, see <a href="https://www.terraform.io/docs/providers/aws/">here</a>.</p>
+
+<p><strong><em>Resource Syntax</em></strong></p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">resource</span> <span class="o">&lt;</span><span class="nx">TYPE</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nx">NAME</span><span class="o">&gt;</span> <span class="p">{</span>
+    <span class="o">&lt;</span><span class="nx">config_key</span><span class="o">&gt;</span> <span class="o">=</span> <span class="o">&lt;</span><span class="nx">config_value</span><span class="o">&gt;</span>
+<span class="p">}</span></code></pre></div>
+
+
+<p>In our case we have to define a VPC for all our resources to reside in. We need to assign our VPC to a specific range of addresses by defining a <a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">CIDR</a> block. Each VPC also needs an internet gateway.</p>
+
+<p>Once again instead of hardcoded values we will declare variables specific for our VPC definition.</p>
+
+<p>We can also introduce a variable which defines the name of our environment. This name will allow us to tag resources and recognise to which environment a given resource belongs.</p>
+
+<p><strong><em>environment-variables.tf</em></strong></p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">variable</span> <span class="s2">&quot;environment_name&quot;</span> <span class="p">{</span>
+    <span class="k">default</span> <span class="o">=</span> <span class="s2">&quot;unknown-environment&quot;</span>
+<span class="p">}</span></code></pre></div>
+
+
+<p><strong><em>vpc-config.tf</em></strong></p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">resource</span> <span class="s2">&quot;aws_vpc&quot;</span> <span class="s2">&quot;environment&quot;</span> <span class="p">{</span>
+    <span class="nx">cidr_block</span> <span class="o">=</span> <span class="s2">&quot;${var.vpc.cidr_block}&quot;</span>
+
+    <span class="nx">tags</span> <span class="p">{</span>
+        <span class="nx">Name</span>        <span class="o">=</span> <span class="s2">&quot;${var.environment_name}-vpc&quot;</span>
+        <span class="nx">Environment</span> <span class="o">=</span> <span class="s2">&quot;${var.environment_name}&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">resource</span> <span class="s2">&quot;aws_internet_gateway&quot;</span> <span class="s2">&quot;environment&quot;</span> <span class="p">{</span>
+    <span class="nx">vpc_id</span> <span class="o">=</span> <span class="s2">&quot;${aws_vpc.environment.id}&quot;</span>
+
+    <span class="nx">tags</span> <span class="p">{</span>
+        <span class="nx">Name</span>        <span class="o">=</span> <span class="s2">&quot;${var.environment_name}-internet-gateway&quot;</span>
+        <span class="nx">Environment</span> <span class="o">=</span> <span class="s2">&quot;${var.environment_name}&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+
+<p><strong><em>vpc-variables.tf</em></strong></p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">variable</span> <span class="s2">&quot;vpc&quot;</span> <span class="p">{</span>
+    <span class="k">default</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nx">owner_id</span> <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
+        <span class="nx">cidr_block</span> <span class="o">=</span> <span class="s2">&quot;10.changeit.0.0/16&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+
+<p>We can use the type of a resource and its name as a reference variable to access properties exposed by a given resource, as we did to reference the VPC id above. Some properties of a resource will be defined by Terraform during creation of the resource, like internal ids or names. Some are already defined in our scripts.</p>
+
+<p>In the above example we assign an internet gateway to our VPC by referencing the property <em><strong>id</strong> of </em><strong>aws_vpc</strong><em> resource with name </em><strong>environment</strong>*.</p>
+
+<h4>Subnets</h4>
+
+<p>Our example VPC should contain two subnets. For each subnet we have to define a range of addresses available (CIDR block), an availability zone and of course we have to assign this subnet to the VPC. Again, we declare variables instead defining values directly in the configuration script.</p>
+
+<p><strong><em>subnets-config.tf</em></strong></p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">resource</span> <span class="s2">&quot;aws_subnet&quot;</span> <span class="s2">&quot;public-subnet&quot;</span> <span class="p">{</span>
+    <span class="nx">vpc_id</span>            <span class="o">=</span> <span class="s2">&quot;${aws_vpc.environment.id}&quot;</span>
+    <span class="nx">cidr_block</span>        <span class="o">=</span> <span class="s2">&quot;${var.vpc_public_subnet.cidr_block}&quot;</span>
+    <span class="nx">availability_zone</span> <span class="o">=</span> <span class="s2">&quot;${var.vpc_public_subnet.availability_zone}&quot;</span>
+
+    <span class="nx">tags</span> <span class="p">{</span>
+        <span class="nx">Name</span>        <span class="o">=</span> <span class="s2">&quot;${var.environment_name}-public-subnet&quot;</span>
+        <span class="nx">Environment</span> <span class="o">=</span> <span class="s2">&quot;${var.environment_name}&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">resource</span> <span class="s2">&quot;aws_subnet&quot;</span> <span class="s2">&quot;private-subnet&quot;</span> <span class="p">{</span>
+    <span class="nx">vpc_id</span>            <span class="o">=</span> <span class="s2">&quot;${aws_vpc.environment.id}&quot;</span>
+    <span class="nx">cidr_block</span>        <span class="o">=</span> <span class="s2">&quot;${var.vpc_private_subnet.cidr_block}&quot;</span>
+    <span class="nx">availability_zone</span> <span class="o">=</span> <span class="s2">&quot;${var.vpc_private_subnet.availability_zone}&quot;</span>
+
+    <span class="nx">tags</span> <span class="p">{</span>
+        <span class="nx">Name</span>        <span class="o">=</span> <span class="s2">&quot;${var.environment_name}-private-subnet&quot;</span>
+        <span class="nx">Environment</span> <span class="o">=</span> <span class="s2">&quot;${var.environment_name}&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+
+<p><strong><em>subnets-variables.tf</em></strong></p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">variable</span> <span class="s2">&quot;vpc&quot;</span> <span class="p">{</span>
+    <span class="k">default</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nx">owner_id</span> <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
+        <span class="nx">cidr_block</span> <span class="o">=</span> <span class="s2">&quot;10.changeit.0.0/16&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">variable</span> <span class="s2">&quot;vpc_public_subnet&quot;</span> <span class="p">{</span>
+    <span class="k">default</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nx">cidr_block</span> <span class="o">=</span> <span class="s2">&quot;10.changeit.0.0/24&quot;</span>
+        <span class="nx">availability_zone</span> <span class="o">=</span> <span class="s2">&quot;changeit&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">variable</span> <span class="s2">&quot;vpc_private_subnet&quot;</span> <span class="p">{</span>
+    <span class="k">default</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nx">cidr_block</span> <span class="o">=</span> <span class="s2">&quot;10.changeit.1.0/24&quot;</span>
+        <span class="nx">availability_zone</span> <span class="o">=</span> <span class="s2">&quot;changeit&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+
+<h4>Route tables</h4>
+
+<p>Each subnet in a VPC must be associated with a route table. This time we have an unusual situation. We have the reference to a resource which was not defined yet (<strong><em>${aws_instance.nat.id}</em></strong>). The order of files is not important for Terraform. It combines all files and based on that knowledge prepares a plan of execution. For that reason we can refer to resources which are defined in different files. Terraform will produce an error during creation if the resource is not defined anywhere.</p>
+
+<p><strong><em>route_tables-config.tf</em></strong></p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">resource</span> <span class="s2">&quot;aws_route_table&quot;</span> <span class="s2">&quot;public-subnet&quot;</span> <span class="p">{</span>
+    <span class="nx">vpc_id</span> <span class="o">=</span> <span class="s2">&quot;${aws_vpc.environment.id}&quot;</span>
+
+    <span class="nx">route</span> <span class="p">{</span>
+        <span class="nx">cidr_block</span> <span class="o">=</span> <span class="s2">&quot;0.0.0.0/0&quot;</span>
+        <span class="nx">gateway_id</span> <span class="o">=</span> <span class="s2">&quot;${aws_internet_gateway.environment.id}&quot;</span>
+    <span class="p">}</span>
+
+    <span class="nx">tags</span> <span class="p">{</span>
+        <span class="nx">Name</span>        <span class="o">=</span> <span class="s2">&quot;${var.environment_name}-public-subnet-route-table&quot;</span>
+        <span class="nx">Environment</span> <span class="o">=</span> <span class="s2">&quot;${var.environment_name}&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">resource</span> <span class="s2">&quot;aws_route_table_association&quot;</span> <span class="s2">&quot;public-subnet&quot;</span> <span class="p">{</span>
+    <span class="nx">subnet_id</span>      <span class="o">=</span> <span class="s2">&quot;${aws_subnet.public-subnet.id}&quot;</span>
+    <span class="nx">route_table_id</span> <span class="o">=</span> <span class="s2">&quot;${aws_route_table.public-subnet.id}&quot;</span>
+<span class="p">}</span>
+
+<span class="nx">resource</span> <span class="s2">&quot;aws_route_table&quot;</span> <span class="s2">&quot;private-subnet&quot;</span> <span class="p">{</span>
+    <span class="nx">vpc_id</span> <span class="o">=</span> <span class="s2">&quot;${aws_vpc.environment.id}&quot;</span>
+
+    <span class="nx">route</span> <span class="p">{</span>
+        <span class="nx">cidr_block</span>  <span class="o">=</span> <span class="s2">&quot;0.0.0.0/0&quot;</span>
+        <span class="nx">instance_id</span> <span class="o">=</span> <span class="s2">&quot;${aws_instance.nat.id}&quot;</span>
+    <span class="p">}</span>
+
+    <span class="nx">tags</span> <span class="p">{</span>
+        <span class="nx">Name</span>        <span class="o">=</span> <span class="s2">&quot;${var.environment_name}-private-subnet-route-table&quot;</span>
+        <span class="nx">Environment</span> <span class="o">=</span> <span class="s2">&quot;${var.environment_name}&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">resource</span> <span class="s2">&quot;aws_route_table_association&quot;</span> <span class="s2">&quot;private-subnet&quot;</span> <span class="p">{</span>
+    <span class="nx">subnet_id</span>      <span class="o">=</span> <span class="s2">&quot;${aws_subnet.private-subnet.id}&quot;</span>
+    <span class="nx">route_table_id</span> <span class="o">=</span> <span class="s2">&quot;${aws_route_table.private-subnet.id}&quot;</span>
+<span class="p">}</span></code></pre></div>
+
+
+<h4>Security groups</h4>
+
+<p>A definition of any EC2 instance requires assigning it to a security group. Security groups are another type of resource in Terraform. Once again configuration of this resource type is straightforward. Depending on our needs we can define inbound (ingress) and outbound (egress) rules for the desired range of ports, protocols and addresses.</p>
+
+<p><strong><em>security_groups-config.tf</em></strong></p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">resource</span> <span class="s2">&quot;aws_security_group&quot;</span> <span class="s2">&quot;nat&quot;</span> <span class="p">{</span>
+    <span class="nx">name</span> <span class="o">=</span> <span class="s2">&quot;${var.environment_name}-nat&quot;</span>
+
+    <span class="nx">ingress</span> <span class="p">{</span>
+        <span class="nx">from_port</span>   <span class="o">=</span> <span class="mi">22</span>
+        <span class="nx">to_port</span>     <span class="o">=</span> <span class="mi">22</span>
+        <span class="nx">protocol</span>    <span class="o">=</span> <span class="s2">&quot;tcp&quot;</span>
+        <span class="nx">cidr_blocks</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">(...)</span>
+    <span class="nx">egress</span> <span class="p">{</span>
+        <span class="nx">from_port</span>   <span class="o">=</span> <span class="mi">80</span>
+        <span class="nx">to_port</span>     <span class="o">=</span> <span class="mi">80</span>
+        <span class="nx">protocol</span>    <span class="o">=</span> <span class="s2">&quot;tcp&quot;</span>
+        <span class="nx">cidr_blocks</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">(...)</span>
+    <span class="nx">vpc_id</span> <span class="o">=</span> <span class="s2">&quot;${aws_vpc.development_environment.id}&quot;</span>
+    <span class="nx">tags</span> <span class="p">{</span>
+        <span class="nx">Name</span>        <span class="o">=</span> <span class="s2">&quot;${var.environment_name}-nat-security-group&quot;</span>
+        <span class="nx">Environment</span> <span class="o">=</span> <span class="s2">&quot;${var.environment_name}&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">resource</span> <span class="s2">&quot;aws_security_group&quot;</span> <span class="s2">&quot;public&quot;</span> <span class="p">{</span>
+    <span class="nx">name</span> <span class="o">=</span> <span class="s2">&quot;${var.environment_name}-public&quot;</span>
+
+    <span class="nx">ingress</span> <span class="p">{</span>
+        <span class="nx">from_port</span>   <span class="o">=</span> <span class="mi">22</span>
+        <span class="nx">to_port</span>     <span class="o">=</span> <span class="mi">22</span>
+        <span class="nx">protocol</span>    <span class="o">=</span> <span class="s2">&quot;tcp&quot;</span>
+        <span class="nx">cidr_blocks</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">(...)</span>
+    <span class="nx">egress</span> <span class="p">{</span>
+        <span class="nx">from_port</span>   <span class="o">=</span> <span class="mi">0</span>
+        <span class="nx">to_port</span>     <span class="o">=</span> <span class="mi">0</span>
+        <span class="nx">protocol</span>    <span class="o">=</span> <span class="s2">&quot;-1&quot;</span>
+        <span class="nx">cidr_blocks</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">]</span>
+    <span class="p">}</span>
+
+    <span class="nx">vpc_id</span> <span class="o">=</span> <span class="s2">&quot;${aws_vpc.development_environment.id}&quot;</span>
+    <span class="nx">tags</span> <span class="p">{</span>
+        <span class="nx">Name</span>        <span class="o">=</span> <span class="s2">&quot;${var.environment_name}-public-security-group&quot;</span>
+        <span class="nx">Environment</span> <span class="o">=</span> <span class="s2">&quot;${var.environment_name}&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">resource</span> <span class="s2">&quot;aws_security_group&quot;</span> <span class="s2">&quot;private&quot;</span> <span class="p">{</span>
+    <span class="nx">name</span> <span class="o">=</span> <span class="s2">&quot;${var.environment_name}-private&quot;</span>
+
+    <span class="nx">ingress</span> <span class="p">{</span>
+        <span class="nx">from_port</span>   <span class="o">=</span> <span class="mi">22</span>
+        <span class="nx">to_port</span>     <span class="o">=</span> <span class="mi">22</span>
+        <span class="nx">protocol</span>    <span class="o">=</span> <span class="s2">&quot;tcp&quot;</span>
+        <span class="nx">cidr_blocks</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;${var.vpc_public_subnet.cidr_block}&quot;</span><span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">(...)</span>
+    <span class="nx">egress</span> <span class="p">{</span>
+        <span class="nx">from_port</span>   <span class="o">=</span> <span class="mi">0</span>
+        <span class="nx">to_port</span>     <span class="o">=</span> <span class="mi">0</span>
+        <span class="nx">protocol</span>    <span class="o">=</span> <span class="s2">&quot;-1&quot;</span>
+        <span class="nx">cidr_blocks</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;0.0.0.0/0&quot;</span><span class="p">]</span>
+    <span class="p">}</span>
+
+    <span class="nx">vpc_id</span> <span class="o">=</span> <span class="s2">&quot;${aws_vpc.development_environment.id}&quot;</span>
+    <span class="nx">tags</span> <span class="p">{</span>
+        <span class="nx">Name</span>        <span class="o">=</span> <span class="s2">&quot;${var.environment_name}-private-security-group&quot;</span>
+        <span class="nx">Environment</span> <span class="o">=</span> <span class="s2">&quot;${var.environment_name}&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+
+<h4>EC2 Instances</h4>
+
+<p>With all the above resources declared we can finally define our EC2 instances.</p>
+
+<p>Our NAT instance and web proxy instance require an Elastic IP (resource <strong><em>aws_eip</em></strong>). We also need to choose an instance type for each EC2 instance.</p>
+
+<p><strong><em>instances-config.tf</em></strong></p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">resource</span> <span class="s2">&quot;aws_instance&quot;</span> <span class="s2">&quot;nat&quot;</span> <span class="p">{</span>
+    <span class="nx">ami</span>                         <span class="o">=</span> <span class="s2">&quot;${var.nat.ami_image}&quot;</span>
+    <span class="nx">availability_zone</span>           <span class="o">=</span> <span class="s2">&quot;${var.nat.availability_zone}&quot;</span>
+    <span class="nx">instance_type</span>               <span class="o">=</span> <span class="s2">&quot;t2.micro&quot;</span>
+    <span class="nx">key_name</span>                    <span class="o">=</span> <span class="s2">&quot;${var.nat.key_name}&quot;</span>
+    <span class="nx">security_groups</span>             <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;${aws_security_group.nat.id}&quot;</span><span class="p">]</span>
+    <span class="nx">subnet_id</span>                   <span class="o">=</span> <span class="s2">&quot;${aws_subnet.public-subnet.id}&quot;</span>
+    <span class="nx">associate_public_ip_address</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="nx">source_dest_check</span>           <span class="o">=</span> <span class="kc">false</span>
+
+    <span class="nx">tags</span> <span class="p">{</span>
+        <span class="nx">Name</span>        <span class="o">=</span> <span class="s2">&quot;${var.environment_name}-nat&quot;</span>
+        <span class="nx">Environment</span> <span class="o">=</span> <span class="s2">&quot;${var.environment_name}&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">resource</span> <span class="s2">&quot;aws_eip&quot;</span> <span class="s2">&quot;nat&quot;</span> <span class="p">{</span>
+    <span class="nx">instance</span> <span class="o">=</span> <span class="s2">&quot;${aws_instance.nat.id}&quot;</span>
+    <span class="nx">vpc</span>      <span class="o">=</span> <span class="kc">true</span>
+<span class="p">}</span>
+
+<span class="nx">resource</span> <span class="s2">&quot;aws_instance&quot;</span> <span class="s2">&quot;web-proxy&quot;</span> <span class="p">{</span>
+    <span class="nx">ami</span>                         <span class="o">=</span> <span class="s2">&quot;${var.web-proxy.ami_image}&quot;</span>
+    <span class="nx">availability_zone</span>           <span class="o">=</span> <span class="s2">&quot;${var.web-proxy.availability_zone}&quot;</span>
+    <span class="nx">instance_type</span>               <span class="o">=</span> <span class="s2">&quot;t2.micro&quot;</span>
+    <span class="nx">key_name</span>                    <span class="o">=</span> <span class="s2">&quot;${var.web-proxy.key_name}&quot;</span>
+    <span class="nx">security_groups</span>             <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;${aws_security_group.public.id}&quot;</span><span class="p">]</span>
+    <span class="nx">subnet_id</span>                   <span class="o">=</span> <span class="s2">&quot;${aws_subnet.public-subnet.id}&quot;</span>
+    <span class="nx">associate_public_ip_address</span> <span class="o">=</span> <span class="kc">true</span>
+    <span class="nx">source_dest_check</span>           <span class="o">=</span> <span class="kc">true</span>
+
+    <span class="nx">tags</span> <span class="p">{</span>
+        <span class="nx">Name</span>        <span class="o">=</span> <span class="s2">&quot;${var.environment_name}-web-proxy&quot;</span>
+        <span class="nx">Environment</span> <span class="o">=</span> <span class="s2">&quot;${var.environment_name}&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">resource</span> <span class="s2">&quot;aws_eip&quot;</span> <span class="s2">&quot;web-proxy&quot;</span> <span class="p">{</span>
+  <span class="nx">instance</span> <span class="o">=</span> <span class="s2">&quot;${aws_instance.web-proxy.id}&quot;</span>
+  <span class="nx">vpc</span>      <span class="o">=</span> <span class="kc">true</span>
+<span class="p">}</span>
+
+<span class="nx">resource</span> <span class="s2">&quot;aws_instance&quot;</span> <span class="s2">&quot;database&quot;</span> <span class="p">{</span>
+    <span class="nx">ami</span>                         <span class="o">=</span> <span class="s2">&quot;${var.database.ami_image}&quot;</span>
+    <span class="nx">availability_zone</span>           <span class="o">=</span> <span class="s2">&quot;${var.database.availability_zone}&quot;</span>
+    <span class="nx">instance_type</span>               <span class="o">=</span> <span class="s2">&quot;t2.micro&quot;</span>
+    <span class="nx">key_name</span>                    <span class="o">=</span> <span class="s2">&quot;${var.database.key_name}&quot;</span>
+    <span class="nx">security_groups</span>             <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;${aws_security_group.private.id}&quot;</span><span class="p">]</span>
+    <span class="nx">subnet_id</span>                   <span class="o">=</span> <span class="s2">&quot;${aws_subnet.private-subnet.id}&quot;</span>
+    <span class="nx">associate_public_ip_address</span> <span class="o">=</span> <span class="kc">false</span>
+    <span class="nx">source_dest_check</span>           <span class="o">=</span> <span class="kc">true</span>
+
+    <span class="nx">tags</span> <span class="p">{</span>
+        <span class="nx">Name</span>        <span class="o">=</span> <span class="s2">&quot;${var.environment_name}-database&quot;</span>
+        <span class="nx">Environment</span> <span class="o">=</span> <span class="s2">&quot;${var.environment_name}&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">resource</span> <span class="s2">&quot;aws_instance&quot;</span> <span class="s2">&quot;service&quot;</span> <span class="p">{</span>
+    <span class="nx">ami</span>                         <span class="o">=</span> <span class="s2">&quot;${var.services.ami_image}&quot;</span>
+    <span class="nx">availability_zone</span>           <span class="o">=</span> <span class="s2">&quot;${var.services.availability_zone}&quot;</span>
+    <span class="nx">instance_type</span>               <span class="o">=</span> <span class="s2">&quot;t2.micro&quot;</span>
+    <span class="nx">key_name</span>                    <span class="o">=</span> <span class="s2">&quot;${var.services.key_name}&quot;</span>
+    <span class="nx">security_groups</span>             <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;${aws_security_group.private.id}&quot;</span><span class="p">]</span>
+    <span class="nx">subnet_id</span>                   <span class="o">=</span> <span class="s2">&quot;${aws_subnet.private-subnet.id}&quot;</span>
+    <span class="nx">associate_public_ip_address</span> <span class="o">=</span> <span class="kc">false</span>
+    <span class="nx">source_dest_check</span>           <span class="o">=</span> <span class="kc">true</span>
+    <span class="nx">count</span>                       <span class="o">=</span> <span class="mi">3</span>
+
+    <span class="nx">tags</span> <span class="p">{</span>
+        <span class="nx">Name</span>        <span class="o">=</span> <span class="s2">&quot;${var.environment_name}-service-${count.index}&quot;</span>
+        <span class="nx">Environment</span> <span class="o">=</span> <span class="s2">&quot;${var.environment_name}&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+
+<p><strong><em>instances-variables.tf</em></strong></p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">variable</span> <span class="s2">&quot;nat&quot;</span> <span class="p">{</span>
+    <span class="k">default</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nx">ami_image</span>         <span class="o">=</span> <span class="s2">&quot;ami-14913f63&quot;</span>
+        <span class="nx">availability_zone</span> <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
+        <span class="nx">key_name</span>          <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">variable</span> <span class="s2">&quot;web-proxy&quot;</span> <span class="p">{</span>
+    <span class="k">default</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nx">ami_image</span>         <span class="o">=</span> <span class="s2">&quot;ami-2c90315b&quot;</span>
+        <span class="nx">availability_zone</span> <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
+        <span class="nx">key_name</span>          <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">variable</span> <span class="s2">&quot;database&quot;</span> <span class="p">{</span>
+    <span class="k">default</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nx">ami_image</span>         <span class="o">=</span> <span class="s2">&quot;ami-2c90315b&quot;</span>
+        <span class="nx">availability_zone</span> <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
+        <span class="nx">key_name</span>          <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="nx">variable</span> <span class="s2">&quot;services&quot;</span> <span class="p">{</span>
+    <span class="k">default</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nx">ami_image</span>         <span class="o">=</span> <span class="s2">&quot;ami-2c90315b&quot;</span>
+        <span class="nx">availability_zone</span> <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
+        <span class="nx">key_name</span>          <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></div>
+
+
+<h4>Verify</h4>
+
+<p>Our VPC definition is now ready. But how do we know that everything is ready for provisioning? We can verify our all hard work. All we have to do is ask Terraform to prepare a plan by executing the following command:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>terraform plan</code></pre></div>
+
+
+<p>Terraform will combine all available files and prepare an execution plan. This means that all definitions will be verified before you start provisioning your resources. The output from this command will also give us an overview of the kind of operations that will be performed during execution of the plan.</p>
+
+<p>We have to remember that the plan only represents a dry run. We don't connect to AWS at this point and we will not find any errors which might occur in the cloud. For example a plan will not show any errors if you have already exceeded your limit of available EC2 instances.</p>
+
+<h3>Apply</h3>
+
+<p>So far we used only default values to run our plan. It is not particularly useful when you want to create real environment.</p>
+
+<p>To apply our execution plan we have to prepare a file which will contain the definitions of our variables. We can override default definitions by creating a file with extension <strong><em>.tfvariables</em></strong>. This file has the format of a regular Java property file where each key is the path of a variable and each value is the value assigned to it. An example variable file for our first environment might look like this:</p>
+
+<p><strong><em>my_first_vpc_environment.tfvariables</em></strong></p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">environment_name</span> <span class="o">=</span> <span class="s2">&quot;my_first_vpc_environment&quot;</span>
+
+provider.access_key <span class="o">=</span> <span class="s2">&quot;[MY_REAL_SECRET]&quot;</span>
+provider.secret_key <span class="o">=</span> <span class="s2">&quot;[MY_REAL_SECRET]&quot;</span>
+provider.region <span class="o">=</span> <span class="s2">&quot;eu-west-1&quot;</span>
+
+vpc.owner_id   <span class="o">=</span> <span class="s2">&quot;[MY_OWNER_ID]&quot;</span>
+vpc.cidr_block <span class="o">=</span> <span class="s2">&quot;10.0.0.0/16&quot;</span>
+
+vpc_public_subnet.cidr_block         <span class="o">=</span> <span class="s2">&quot;10.0.0.0/24&quot;</span>
+vpc_public_subnet.availability_zone  <span class="o">=</span> <span class="s2">&quot;eu-west-1a&quot;</span>
+
+vpc_private_subnet.cidr_block        <span class="o">=</span> <span class="s2">&quot;10.0.1.0/24&quot;</span>
+vpc_private_subnet.availability_zone <span class="o">=</span> <span class="s2">&quot;eu-west-1a&quot;</span>
+
+nat.key_name                <span class="o">=</span> <span class="s2">&quot;my_first_vpc_environment&quot;</span>
+nat.availability_zone       <span class="o">=</span> <span class="s2">&quot;eu-west-1a&quot;</span>
+
+web-proxy.key_name          <span class="o">=</span> <span class="s2">&quot;my_first_vpc_environment&quot;</span>
+web-proxy.availability_zone <span class="o">=</span> <span class="s2">&quot;eu-west-1a&quot;</span>
+
+database.key_name           <span class="o">=</span> <span class="s2">&quot;my_first_vpc_environment&quot;</span>
+database.availability_zone  <span class="o">=</span> <span class="s2">&quot;eu-west-1a&quot;</span>
+
+services.key_name           <span class="o">=</span> <span class="s2">&quot;my_first_vpc_environment&quot;</span>
+services.availability_zone  <span class="o">=</span> <span class="s2">&quot;eu-west-1a&quot;</span></code></pre></div>
+
+
+<p>We can verify the plan again and if we decide that we are ready we can apply it by executing the following command:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>terraform apply</code></pre></div>
+
+
+<p>Terraform will now connect to AWS and try to create all resources defined in Terraform scripts. The output of this command is a state file <strong><em>terraform.tfstate</em></strong> which contains all the information about the environment that we just provisioned. At the time of writing <a href="https://www.terraform.io/docs/state/index.html">the state file must be kept for future execution</a> (e.g. in your version control system), because Terraform uses it to determine differences between cloud state and the current definition stored in your scripts.</p>
+
+<h3>Change</h3>
+
+<p>Sometimes we have to change our environment. It requires just a change in your definition config. Based on
+the state of your existing environment and your updated configuration, Terraform is able to prepare a new plan and apply changes to your infrastructure.</p>
+
+<p>You can use the <strong><em>plan</em></strong> and <strong><em>apply</em></strong> commands in the same way as for a new environment. This time Terraform compares the state stored in the state file generated on the initial run, and plans/applies any newly-introduced changes to the configuration.</p>
+
+<h3>Destroy</h3>
+
+<p>Everything has to come to an end, sometime. When the time comes we can execute this command:</p>
+
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>terraform destroy</code></pre></div>
+
+
+<p>Terraform once again reuses our state file and will remove all resources defined there.</p>
+
+<h2>What's next?</h2>
+
+<p>In this post we only scratched the surface of Terraform. The AWS provider is one of <a href="https://www.terraform.io/docs/providers/index.html">many providers available</a>. Terraform allows us to combine different providers which give the possibility of provisioning environments across multiple cloud providers.</p>
+
+<p>It also has other basic features. For example <a href="https://www.terraform.io/docs/configuration/outputs.html">outputs</a> give you the possibility to generate files based on any available variables and resource properties. You can use it to generate documentation, config files or just human readable text files.</p>
+
+<p>Now our infrastructure can be managed in code. We can check it into source control, raise pull requests in GitHub and provide living documentation for our environment topology. We can lay the foundation for our deployments and tools like Puppet, Chef and Docker.</p>
+
+<p>All code examples described here can be found <a href="https://github.com/robertfirek/ShapeYourInfrastructure">on GitHub</a>.</p>
+
+
+        
+    </div>
+    <!--End Blog Post-->
+</div>
+<!-- End Left Sidebar -->
+
+<!-- Right Sidebar -->
+<div class="col-md-3 magazine-page">
+    <!-- Blog Latest Tweets -->
+    <div class="blog-twitter margin-bottom-30">
+        <a class="twitter-timeline" href="https://twitter.com/mashooq/codurance" data-widget-id="400789734676385792">Tweets from Codurance team</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<script>window.twttr = (function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0],t = window.twttr || {};if (d.getElementById(id)) return t;js = d.createElement(s);js.id = id;js.src = "https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, "script", "twitter-wjs"));</script>
+    </div>
+    <!-- End Blog Latest Tweets -->
+</div>
+<!-- End Right Sidebar -->
+</div>
+<!--/row-->
+</div>
+<!--/container-->
+
+
+<!--=== Copyright ===-->
+<div class="footer-default">
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <p class="copyright-space">
+                         Company Registration No: 8712584
+                         | Contact us: <a href="mailto:hello@codurance.com" class="">hello@codurance.com</a>
+                         | Phone: +44 203 440 4015
+                    </p>
+
+                </div>
+                <div class="col-md-4">
+                    <ul class="social-icons pull-right">
+                        <li><a href="/atom.xml" data-original-title="Feed" class="social_rss"></a></li>
+                        <li><a href="http://twitter.com/codurance" data-original-title="Twitter" class="social_twitter"></a></li>
+                    </ul>
+                </div>
+            </div> <!--/row-->
+        </div> <!--/container-->
+    </div><!--/copyright-->
+</div>
+
+<!--=== End Copyright ===-->
+</div>
+
+<!-- JS Global Compulsory -->
+<script type="text/javascript" src="/assets/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/plugins/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/plugins/back-to-top.js"></script>
+<!-- JS Implementing Plugins -->
+<script type="text/javascript" src="/assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript" src="/assets/plugins/gmap/gmap.js"></script>
+<!-- JS Customization -->
+<script type="text/javascript" src="/assets/js/custom.js"></script>
+<!-- JS Page Level -->
+<script type="text/javascript" src="/assets/js/app.js"></script>
+<script type="text/javascript" src="/assets/js/pages/index.js"></script>
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        App.init();
+        Index.initOwlCarousel();
+        Contact.initMap();
+    });
+</script>
+<!--[if lt IE 9]>
+    <script src="/assets/plugins/respond.js"></script>
+    <script src="/assets/plugins/html5shiv.js"></script> 
+    <script src="/assets/js/plugins/placeholder-IE-fixes.js"></script>   
+<![endif]-->
+
+</body>
+</html>
