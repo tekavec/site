@@ -3,13 +3,25 @@
     <title>Codurance</title>
     <link href="/atom.xml" rel="self"/>
     <link href=""/>
-    <updated>2015-07-08T11:44:35+00:00</updated>
+    <updated>2015-07-13T18:48:36+00:00</updated>
     <id>http://codurance.com</id>
     <author>
         <name>Codurance</name>
         <email>hello@codurance.com</email>
     </author>
     <rights>Copyright (c) Codurance</rights>
+    
+    <entry>
+        <id>/2015/07/13/How-to-start-doing-TDD-in-iOS/</id>
+        <title>How to start doing TDD in iOS</title>
+        <link href="/2015/07/13/How-to-start-doing-TDD-in-iOS/"/>
+        <published>2015-07-13T12:00:00+00:00</published>
+        
+        <summary type="html">&lt;p&gt;I like to do apps. As a newbie TDD developer, I&#39;ve made my apps with tests but not driven by tests. I want to change that. I&#39;m learning to be a Craftsman, so TDD is an essential technique to know. It&#39;s your main tool. At Codurance it&#39;s unthinkable that you could code without doing TDD. That&#39;s one of the things that you learn in our apprenticeship program: to be able to do TDD without thinking about it and feel it&#39;s natural: as you breath to survive you do TDD to code.&lt;/p&gt;
+
+</summary>
+        
+    </entry>
     
     <entry>
         <id>/2015/06/30/shape-your-infrastructure-with-terraform/</id>
@@ -174,18 +186,6 @@
         <published>2015-05-04T09:00:00+00:00</published>
         
         <summary type="html">&lt;p&gt;I spend several hours each week on long-distance train journeys and often use the time to code, whether on a pet project or practising a kata or two. Large parts of this journey have patchy-at-best mobile data coverage, so tools with a reliance on a stable internet connection can cause problems. One of these tools is the NuGet Package Manager in Visual Studio.&lt;/p&gt;
-
-</summary>
-        
-    </entry>
-    
-    <entry>
-        <id>/2015/04/17/design-patterns-in-the-21st-century-part-five/</id>
-        <title>Design Patterns in the 21st Century: Conclusion</title>
-        <link href="/2015/04/17/design-patterns-in-the-21st-century-part-five/"/>
-        <published>2015-04-17T17:00:00+00:00</published>
-        
-        <summary type="html">&lt;p&gt;This is part five of my talk, &lt;a href=&quot;http://talks.samirtalwar.com/design-patterns-in-the-21st-century.html&quot;&gt;Design Patterns in the 21st Century&lt;/a&gt;.&lt;/p&gt;
 
 </summary>
         
