@@ -3,7 +3,7 @@
     <title>Codurance</title>
     <link href="/atom.xml" rel="self"/>
     <link href=""/>
-    <updated>2015-07-13T18:48:36+00:00</updated>
+    <updated>2015-07-13T19:04:40+00:00</updated>
     <id>http://codurance.com</id>
     <author>
         <name>Codurance</name>
@@ -17,7 +17,7 @@
         <link href="/2015/07/13/How-to-start-doing-TDD-in-iOS/"/>
         <published>2015-07-13T12:00:00+00:00</published>
         
-        <summary type="html">&lt;p&gt;I like to do apps. As a newbie TDD developer, I&#39;ve made my apps with tests but not driven by tests. I want to change that. I&#39;m learning to be a Craftsman, so TDD is an essential technique to know. It&#39;s your main tool. At Codurance it&#39;s unthinkable that you could code without doing TDD. That&#39;s one of the things that you learn in our apprenticeship program: to be able to do TDD without thinking about it and feel it&#39;s natural: as you breath to survive you do TDD to code.&lt;/p&gt;
+        <summary type="html">&lt;p&gt;I like to do apps. As a newbie TDD developer, I&#39;ve made my apps with tests but not driven by tests. I want to change that. I&#39;m learning to be a Craftsman, so TDD is an essential technique to know. It&#39;s your main tool. At Codurance it&#39;s unthinkable that you could code without doing TDD. That&#39;s one of the things that you learn in our apprenticeship program: to be able to do TDD without thinking about it and feel as if it&#39;s natural: as you breath to survive you do TDD to code.&lt;/p&gt;
 
 </summary>
         
