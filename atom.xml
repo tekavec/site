@@ -3,13 +3,26 @@
     <title>Codurance</title>
     <link href="/atom.xml" rel="self"/>
     <link href=""/>
-    <updated>2015-07-14T10:33:53+00:00</updated>
+    <updated>2015-07-14T15:21:40+00:00</updated>
     <id>http://codurance.com</id>
     <author>
         <name>Codurance</name>
         <email>hello@codurance.com</email>
     </author>
     <rights>Copyright (c) Codurance</rights>
+    
+    <entry>
+        <id>/2015/07/14/learning-from-our-failures/</id>
+        <title>Learning from our failures</title>
+        <link href="/2015/07/14/learning-from-our-failures/"/>
+        <published>2015-07-14T17:00:00+00:00</published>
+        
+        <summary type="html">&lt;p&gt;On my second day at Codurance, I managed to delete the repository with &lt;a href=&quot;http://codurance.com/&quot;&gt;Codurance&#39;s GitHub Pages&lt;/a&gt; on it. This made the website unavailable for the first time in a long time, and during best business hours.
+I passed by all the checks Github does to make sure you know what you&#39;re doing, thinking I was about to delete the fork I accidentally created. When I saw afterwards that the fork was still there, I immediately realized what I had done.&lt;/p&gt;
+
+</summary>
+        
+    </entry>
     
     <entry>
         <id>/2015/07/13/How-to-start-doing-TDD-in-iOS/</id>
@@ -174,18 +187,6 @@
         <published>2015-05-04T11:22:00+00:00</published>
         
         <summary type="html">&lt;p&gt;There is a lot of excitement in the Java community since Java 8 was released. Lambdas and Streams are a massive improvement and nobody wants to go back to the old days. Today, however, I want to talk about the caveats of some use of Java Streams.&lt;/p&gt;
-
-</summary>
-        
-    </entry>
-    
-    <entry>
-        <id>/2015/05/04/creating-a-local-nuget-repository/</id>
-        <title>Creating a local NuGet repository for offline development</title>
-        <link href="/2015/05/04/creating-a-local-nuget-repository/"/>
-        <published>2015-05-04T09:00:00+00:00</published>
-        
-        <summary type="html">&lt;p&gt;I spend several hours each week on long-distance train journeys and often use the time to code, whether on a pet project or practising a kata or two. Large parts of this journey have patchy-at-best mobile data coverage, so tools with a reliance on a stable internet connection can cause problems. One of these tools is the NuGet Package Manager in Visual Studio.&lt;/p&gt;
 
 </summary>
         
