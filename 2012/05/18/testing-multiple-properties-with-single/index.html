@@ -153,17 +153,47 @@ not pass.</p>
 <p>I've decided to write my own matcher and hopefully it will be useful to
 other people. So, that's what I've done:</p>
 
-<p><a href="https://github.com/sandromancuso/bean-property-matcher">BeanMatcher</a></p>
+<h3>BeanMatcher</h3>
+
+<p>Hamcrest matcher to match multiple attributes of an object within a single assertion.</p>
+
+<h3>How to use it</h3>
+
+<pre><code>// Static imports
+
+import static org.craftedsw.beanpropertymatcher.matcher.BeanMatcher.has;
+import static org.craftedsw.beanpropertymatcher.matcher.BeanPropertyMatcher.property;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.greaterThan;
+
+// Imagine that you have a method that returns an object Person
+
+Person person = new Person();
+person.setFirstName("Sandro");
+person.setAge(25);
+person.setLastName("Mancuso");
+
+// Then you can test it like that
+
+assertThat(person, has(
+                        property("firstName", equalTo("Another dude")),  // Mistmatch
+                        property("age", greaterThan(18)),  // Use any matcher
+                        property("lastName", equalTo("Mancuso"))));
+</code></pre>
 
 <p>Hamcrest matcher to match multiple attributes of an object within a
 single assertion.</p>
-
-<p><a href="https://github.com/sandromancuso/bean-property-matcher#how-to-use-it">How to use it</a></p>
 
 <p><strong>NOTE</strong>: Make sure you are using org.hamcrest.MatcherAssert.assertThat
 instead of the JUnit one.</p>
 
 <p>If you run this test, you will get a message like</p>
+
+<pre><code>java.lang.AssertionError:
+     Expected: property "firstName" = "Another dude"
+     but: property "firstName" was "Sandro"
+</code></pre>
 
 <p>Now, change the age check to</p>
 
@@ -175,21 +205,46 @@ instead of the JUnit one.</p>
 <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Testing</span> <span class="n">object</span> <span class="n">graphs</span></code></pre></div>
 
 
+<h3>Testing object graphs</h3>
+
 <p>You can also do this</p>
+
+<pre><code>Person person = new Person();
+    person.setFirstName("Sandro");
+    person.setAge(35);
+
+    Country uk = new Country();
+    uk.setName("United Kingdom");
+
+    Address address = new Address();
+    address.setPostcode("1234556");
+    address.setCity("London");
+    address.setCountry(uk);
+
+    person.setAddress(address);
+
+    assertThat(person, has(
+                            property("firstName", equalTo("Sandro")),
+                            property("age", greaterThan(18)),
+                            property("address.city", equalTo("London")),
+                            property("address.postcode", equalTo("1234556")),
+                            property("address.country.name", equalTo("United Kingdom"))));
+</code></pre>
 
 <p>I use a combination of two matchers to do that:</p>
 
-<p><a href="https://github.com/sandromancuso/bean-property-matcher/blob/master/src/main/java/org/craftedsw/beanpropertymatcher/matcher/BeanMatcher.java">BeanMatcher</a>:
+<ul>
+<li><p><a href="https://github.com/sandromancuso/bean-property-matcher/blob/master/src/main/java/org/craftedsw/beanpropertymatcher/matcher/BeanMatcher.java">BeanMatcher</a>:
 Provides the "has" method responsible to group all the property
-matchers.</p>
+matchers.</p></li>
+<li><p><a href="https://github.com/sandromancuso/bean-property-matcher/blob/master/src/main/java/org/craftedsw/beanpropertymatcher/matcher/BeanPropertyMatcher.java">BeanPropertyMatcher</a>:
+Provides the "property" method.</p></li>
+</ul>
 
-<p><a href="https://github.com/sandromancuso/bean-property-matcher/blob/master/src/main/java/org/craftedsw/beanpropertymatcher/matcher/BeanPropertyMatcher.java">BeanPropertyMatcher</a>:
-Provides the "property" method.</p>
 
 <p>I expect to make more changes to them, so for the most up-to-date
-version, please check</p>
-
-<p><a href="https://github.com/sandromancuso/bean-property-matcher">BeanMatcher</a> on
+version, please check
+<a href="https://github.com/sandromancuso/bean-property-matcher">BeanMatcher</a> on
 <a href="https://github.com/sandromancuso">my github account</a>.</p>
 
 <p>Enjoy!!!</p>

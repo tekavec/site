@@ -141,10 +141,43 @@
 
         
 
-        <p>In <a href="/2011/07/17/testing-legacy-hard-wired-dependencies/">part one</a>,
+        <p>In <a href="/2011/07/16/testing-legacy-hard-wired-dependencies/">part one</a>,
 I showed how to unit test a method that uses a Singleton and makes
 static calls. So now, let's have a look at common code problems we find
 in legacy code, using the same example:</p>
+
+<pre><code>public class TripService {
+
+    public List&lt;Trip&gt; getTripsByUser(User user) throws UserNotLoggedInException {
+        List&lt;Trip&gt; tripList = new ArrayList&lt;Trip&gt;();
+        User loggedUser = loggedUser();
+        boolean isFriend = false;
+        if (loggedUser != null) {
+            for (User friend : user.getFriends()) {
+                if (friend.equals(loggedUser)) {
+                    isFriend = true;
+                    break;
+                }
+            }
+            if (isFriend) {
+                tripList = findTripsByUser(user);
+            }
+            return tripList;
+        } else {
+            throw new UserNotLoggedInException();
+        }
+    }
+
+    protected List&lt;Trip&gt; findTripsByUser(User user) {
+        return TripDAO.findTripsByUser(user);
+    }
+
+    protected User loggedUser() {
+        return UserSession.getInstance().getLoggedUser();
+    }
+
+}
+</code></pre>
 
 <p>How many problems can you see? Take your time before reading the ones I
 found.. :-)</p>
@@ -159,6 +192,28 @@ be created when the logged user is null, since an exception is thrown
 and nothing else happens. I've decided to invert the outer if and
 extract the <a href="http://c2.com/cgi/wiki?GuardClause">guard clause</a>. </p>
 
+<pre><code>public List&lt;Trip&gt; getTripsByUser(User user) throws UserNotLoggedInException {
+    User loggedUser = loggedUser();
+    validate(loggedUser);
+    List&lt;Trip&gt; tripList = new ArrayList&lt;Trip&gt;();
+    boolean isFriend = false;
+    for (User friend : user.getFriends()) {
+        if (friend.equals(loggedUser)) {
+            isFriend = true;
+            break;
+        }
+    }
+    if (isFriend) {
+        tripList = findTripsByUser(user);
+    }
+    return tripList;
+}
+
+private void validate(User loggedUser) throws UserNotLoggedInException {
+    if (loggedUser == null) throw new UserNotLoggedInException();
+}
+</code></pre>
+
 <h3>Feature Envy</h3>
 
 <p>When a class gets data from another class in order to do some
@@ -171,11 +226,31 @@ and the operations on that data should be on the same object.</p>
 if an user is friends with another doesn't belong to the TripService
 class. Let's move it to the User class. First the unit test:</p>
 
+<pre><code>@Test public void
+shouldReturnTrueWhenUsersAreFriends() throws Exception {
+    User John = new User();
+    User Bob = new User();
+
+    John.addFriend(Bob);
+
+    assertTrue(John.isFriendsWith(Bob));
+}
+</code></pre>
+
 <p>Now, let's move the code to the User class. Here we can use the Java
 collections API a bit better and remove the whole for loop and the
 isFriend flag all together.</p>
 
 <p>After a few refactoring steps, here is the new code in the TripService</p>
+
+<pre><code>public List&lt;Trip&gt; getTripsByUser(User user) throws UserNotLoggedInException {
+    User loggedUser = loggedUser();
+    validate(loggedUser);
+    return (user.isFriendsWith(loggedUser))
+                ? findTripsByUser(user)
+                : new ArrayList&lt;Trip&gt;();
+}
+</code></pre>
 
 <p>Right. This is already much better but it is still not good enough.</p>
 
@@ -214,6 +289,25 @@ interface. We need to change that as well.</p>
 
 <p>So here is the final code:</p>
 
+<pre><code>public class TripService {
+
+    public List&lt;Trip&gt; getFriendTrips(User loggedUser, User friend) throws UserNotLoggedInException {
+        validate(loggedUser);
+        return (friend.isFriendsWith(loggedUser))
+                    ? findTripsForFriend(friend)
+                    : new ArrayList&lt;Trip&gt;();
+    }
+
+    private void validate(User loggedUser) throws UserNotLoggedInException {
+        if (loggedUser == null) throw new UserNotLoggedInException();
+    }
+
+    protected List&lt;Trip&gt; findTripsForFriend(User friend) {
+        return TripDAO.findTripsByUser(friend);
+    }
+}
+</code></pre>
+
 <p>Better, isn't it? We still have the issue with the other protected
 method, with the TripDAO static call, etc. But I'll leave this last bit
 for another post on how to remove dependencies on static methods. I'll
@@ -243,7 +337,7 @@ have the business domain expressed in the code.</p>
 If we want it to be pleasant and maintainable, we need to be constantly
 looking after it.</p>
 
-<p>If you haven't read it yet, check the <a href="/2011/07/17/testing-legacy-hard-wired-dependencies/">part one</a>
+<p>If you haven't read it yet, check the <a href="/2011/07/16/testing-legacy-hard-wired-dependencies/">part one</a>
 of this post. If you want to give this code a go or find more details
 about the implementation, check:
 <a href="https://github.com/sandromancuso/testing_legacy_code">https://github.com/sandromancuso/testing_legacy_code</a></p>
