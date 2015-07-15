@@ -3,7 +3,7 @@
     <title>Codurance</title>
     <link href="/atom.xml" rel="self"/>
     <link href=""/>
-    <updated>2015-07-14T15:21:40+00:00</updated>
+    <updated>2015-07-15T10:06:22+00:00</updated>
     <id>http://codurance.com</id>
     <author>
         <name>Codurance</name>
@@ -14,7 +14,7 @@
     <entry>
         <id>/2015/07/14/learning-from-our-failures/</id>
         <title>Learning from our failures</title>
-        <link href="/2015/07/14/learning-from-our-failures/"/>
+        <link href="http://codurance.com/2015/07/14/learning-from-our-failures/"/>
         <published>2015-07-14T17:00:00+00:00</published>
         
         <summary type="html">&lt;p&gt;On my second day at Codurance, I managed to delete the repository with &lt;a href=&quot;http://codurance.com/&quot;&gt;Codurance&#39;s GitHub Pages&lt;/a&gt; on it. This made the website unavailable for the first time in a long time, and during best business hours.
@@ -27,7 +27,7 @@ I passed by all the checks Github does to make sure you know what you&#39;re doi
     <entry>
         <id>/2015/07/13/How-to-start-doing-TDD-in-iOS/</id>
         <title>How to start doing TDD in iOS</title>
-        <link href="/2015/07/13/How-to-start-doing-TDD-in-iOS/"/>
+        <link href="http://codurance.com/2015/07/13/How-to-start-doing-TDD-in-iOS/"/>
         <published>2015-07-13T12:00:00+00:00</published>
         
         <summary type="html">&lt;p&gt;I like to do apps. As a newbie TDD developer, I&#39;ve made my apps with tests but not driven by tests. I want to change that. I&#39;m learning to be a Craftsman, so TDD is an essential technique to know. It&#39;s your main tool. At Codurance it&#39;s unthinkable that you could code without doing TDD. That&#39;s one of the things that you learn in our apprenticeship program: to be able to do TDD without thinking about it and feel as if it&#39;s natural: as you breath to survive you do TDD to code.&lt;/p&gt;
@@ -39,7 +39,7 @@ I passed by all the checks Github does to make sure you know what you&#39;re doi
     <entry>
         <id>/2015/06/30/shape-your-infrastructure-with-terraform/</id>
         <title>Shape your infrastructure with Terraform</title>
-        <link href="/2015/06/30/shape-your-infrastructure-with-terraform/"/>
+        <link href="http://codurance.com/2015/06/30/shape-your-infrastructure-with-terraform/"/>
         <published>2015-06-30T12:00:00+00:00</published>
         
         <summary type="html">&lt;p&gt;The popularity of cloud infrastructure services has hugely increased over the last few years. Companies value the flexibility and reliability provided by such services. The simplicity of the solutions delivered by cloud providers should remove the burden from the shoulders of busy Dev and Ops people and give the possibility to focus on real customer&#39;s needs.&lt;/p&gt;
@@ -51,7 +51,7 @@ I passed by all the checks Github does to make sure you know what you&#39;re doi
     <entry>
         <id>/2015/06/19/cloud-application-design-considerations/</id>
         <title>Cloud Application Design Considerations</title>
-        <link href="/2015/06/19/cloud-application-design-considerations/"/>
+        <link href="http://codurance.com/2015/06/19/cloud-application-design-considerations/"/>
         <published>2015-06-19T17:00:00+00:00</published>
         
         <summary type="html">&lt;h1&gt;Cloud Application Design Considerations&lt;/h1&gt;
@@ -63,7 +63,7 @@ I passed by all the checks Github does to make sure you know what you&#39;re doi
     <entry>
         <id>/2015/06/17/finding-the-biting-point/</id>
         <title>Finding the biting point with pair programming</title>
-        <link href="/2015/06/17/finding-the-biting-point/"/>
+        <link href="http://codurance.com/2015/06/17/finding-the-biting-point/"/>
         <published>2015-06-17T09:00:00+00:00</published>
         
         <summary type="html">&lt;h2&gt;The inevitable imbalance in pair programming.&lt;/h2&gt;
@@ -75,7 +75,7 @@ I passed by all the checks Github does to make sure you know what you&#39;re doi
     <entry>
         <id>/2015/06/17/inflection-point/</id>
         <title>Inflection Point</title>
-        <link href="/2015/06/17/inflection-point/"/>
+        <link href="http://codurance.com/2015/06/17/inflection-point/"/>
         <published>2015-06-17T02:34:00+00:00</published>
         
         <summary type="html">&lt;p&gt;We all say that software design is all about trade-offs but how do we actually reason about it? How do we decide how much code we are going to write for a given task? Is the easiest thing that could possibly work the right approach? The simplest? How do we know the &lt;a href=&quot;http://www.infoq.com/presentations/Simple-Made-Easy&quot;&gt;difference between simple and easy&lt;/a&gt;? Is this even the right question?&lt;/p&gt;
@@ -87,7 +87,7 @@ I passed by all the checks Github does to make sure you know what you&#39;re doi
     <entry>
         <id>/2015/06/13/big-data-skills-spectrum/</id>
         <title>Big Data Skills Spectrum</title>
-        <link href="/2015/06/13/big-data-skills-spectrum/"/>
+        <link href="http://codurance.com/2015/06/13/big-data-skills-spectrum/"/>
         <published>2015-06-13T18:00:00+00:00</published>
         
         <summary type="html">&lt;p&gt;Big Data has been a hype for many years. I’ve seen a few “Big Data” projects start in the past with a lot of fanfare and promise.The promise has always been that “we will start getting a holistic picture of our departmental silos and gain numerous insights from our data that will help us get ahead of our competitors”. The promise was rarely, if ever, fulfilled and the “Big Data” team slowly faded into the rest of the melting pot that we call the “IT department” in most large enterprises.&lt;/p&gt;
@@ -99,7 +99,7 @@ I passed by all the checks Github does to make sure you know what you&#39;re doi
     <entry>
         <id>/2015/06/13/extreme-learning/</id>
         <title>A really good way to make your learning more effective</title>
-        <link href="/2015/06/13/extreme-learning/"/>
+        <link href="http://codurance.com/2015/06/13/extreme-learning/"/>
         <published>2015-06-13T10:00:00+00:00</published>
         
         <summary type="html">&lt;p&gt;Last weekend I was lucky enough to attend &lt;a href=&quot;http://socratesuk.org&quot;&gt;Socrates UK 2015&lt;/a&gt;, an annual international software craftsmanship gathering set in the scenic surroundings of Farnham, Oxfordshire. If you have not done so, I definitely recommend checkout out this conference, either in England or the other Socrates events taking place across Europe (Germany, Belgium, France ...).&lt;/p&gt;
@@ -111,7 +111,7 @@ I passed by all the checks Github does to make sure you know what you&#39;re doi
     <entry>
         <id>/2015/06/07/conversing-on-conversations-at-socrates-uk-2015/</id>
         <title>Conversations About Conversations at SoCraTes UK 2015</title>
-        <link href="/2015/06/07/conversing-on-conversations-at-socrates-uk-2015/"/>
+        <link href="http://codurance.com/2015/06/07/conversing-on-conversations-at-socrates-uk-2015/"/>
         <published>2015-06-07T18:00:00+00:00</published>
         
         <summary type="html">&lt;p&gt;OK, brain dump time.&lt;/p&gt;
@@ -123,7 +123,7 @@ I passed by all the checks Github does to make sure you know what you&#39;re doi
     <entry>
         <id>/2015/06/04/crank-up-the-volume/</id>
         <title>Crank Up The Volume And Forget Your Pomodoros</title>
-        <link href="/2015/06/04/crank-up-the-volume/"/>
+        <link href="http://codurance.com/2015/06/04/crank-up-the-volume/"/>
         <published>2015-06-04T08:00:00+00:00</published>
         
         <summary type="html">&lt;p&gt;Together, &lt;a href=&quot;https://twitter.com/stevelydford&quot;&gt;Steve Lydford&lt;/a&gt; and I came up with a way to work that we don&#39;t think has been put to paper before.&lt;/p&gt;
@@ -135,7 +135,7 @@ I passed by all the checks Github does to make sure you know what you&#39;re doi
     <entry>
         <id>/2015/05/19/working-with-slas/</id>
         <title>Working with SLAs</title>
-        <link href="/2015/05/19/working-with-slas/"/>
+        <link href="http://codurance.com/2015/05/19/working-with-slas/"/>
         <published>2015-05-19T13:00:00+00:00</published>
         
         <summary type="html">&lt;p&gt;If you spend any time designing applications which use third-party platforms and services, you will have spent time considering Service Level Agreements (SLAs). The &lt;em&gt;tl;dr&lt;/em&gt; part of any SLA, the bit the everyone is actually interested in, is the uptime guarantee. However, this seemingly simple number has some hidden meanings that you should be aware of when designing applications and reporting your SLAs to customers.&lt;/p&gt;
@@ -147,7 +147,7 @@ I passed by all the checks Github does to make sure you know what you&#39;re doi
     <entry>
         <id>/2015/05/18/applying-transformation-priority-premise-to-roman-numerals-kata/</id>
         <title>Applying Transformation Priority Premise to Roman Numerals Kata</title>
-        <link href="/2015/05/18/applying-transformation-priority-premise-to-roman-numerals-kata/"/>
+        <link href="http://codurance.com/2015/05/18/applying-transformation-priority-premise-to-roman-numerals-kata/"/>
         <published>2015-05-18T17:00:00+00:00</published>
         
         <summary type="html">&lt;h1&gt;Applying Transformation Priority Premise to Roman Numerals Kata&lt;/h1&gt;
@@ -159,7 +159,7 @@ I passed by all the checks Github does to make sure you know what you&#39;re doi
     <entry>
         <id>/2015/05/12/does-tdd-lead-to-good-design/</id>
         <title>Does TDD really lead to good design?</title>
-        <link href="/2015/05/12/does-tdd-lead-to-good-design/"/>
+        <link href="http://codurance.com/2015/05/12/does-tdd-lead-to-good-design/"/>
         <published>2015-05-12T14:32:00+00:00</published>
         
         <summary type="html">&lt;p&gt;Recently I tweeted that &lt;a href=&quot;https://twitter.com/sandromancuso/status/588503877235781632&quot;&gt;TDD can’t lead to a good design if we don’t know what good design looks like&lt;/a&gt;. I was also saying that we probably should teach design before TDD (or at least, at the same time). This tweet led to a discussions with &lt;a href=&quot;https://twitter.com/jbrains&quot;&gt;J.B. Rainsberger&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/RonJeffries&quot;&gt;Ron Jeffries&lt;/a&gt;, and a few others. J.B. and I ended up having a live &lt;a href=&quot;https://www.youtube.com/watch?v=ty3p5VDcoOI&quot;&gt;discussion on Hangout on Air&lt;/a&gt; later on.&lt;/p&gt;
@@ -171,7 +171,7 @@ I passed by all the checks Github does to make sure you know what you&#39;re doi
     <entry>
         <id>/2015/05/06/interview-with-sandro-mancuso/</id>
         <title>Q&amp;A about The Software Craftsman</title>
-        <link href="/2015/05/06/interview-with-sandro-mancuso/"/>
+        <link href="http://codurance.com/2015/05/06/interview-with-sandro-mancuso/"/>
         <published>2015-05-06T01:26:00+00:00</published>
         
         <summary type="html">&lt;p&gt;&lt;em&gt;Our co-founder &lt;a href=&quot;http://twitter.com/sandromancuso&quot;&gt;Sandro Mancuso&lt;/a&gt; was &lt;a href=&quot;http://www.infoq.com/articles/mancuso-software-craftsman&quot;&gt;interviewed by Ben Linders from InfoQ&lt;/a&gt;. Below is the full transcript.&lt;/em&gt;&lt;/p&gt;
@@ -183,7 +183,7 @@ I passed by all the checks Github does to make sure you know what you&#39;re doi
     <entry>
         <id>/2015/05/04/side-effects-and-java-8-streams/</id>
         <title>Side effects and Java 8 streams</title>
-        <link href="/2015/05/04/side-effects-and-java-8-streams/"/>
+        <link href="http://codurance.com/2015/05/04/side-effects-and-java-8-streams/"/>
         <published>2015-05-04T11:22:00+00:00</published>
         
         <summary type="html">&lt;p&gt;There is a lot of excitement in the Java community since Java 8 was released. Lambdas and Streams are a massive improvement and nobody wants to go back to the old days. Today, however, I want to talk about the caveats of some use of Java Streams.&lt;/p&gt;
