@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+<title>Codurance - Extract, Inject, Kill: Breaking hierarchies (part 2)</title>
+ <!-- Meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Open Graph tags - Used when publishing on Facebook -->
+<meta property="og:site_name" content="Codurance"/>
+<meta property="og:description" content="We build well-crafted software"/>
+<meta property="og:url" content="http://codurance.com"/>
+<meta property="og:image" content="http://codurance.com/assets/img/codurance.png"/>
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="/assets/img/favicon.ico">
+
+<!-- CSS Global Compulsory -->
+<link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="/assets/css/style.css">
+
+<!-- CSS Implementing Plugins -->
+<link rel="stylesheet" href="/assets/plugins/line-icons/line-icons.css">
+<link rel="stylesheet" href="/assets/plugins/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
+
+<!-- CSS Theme -->
+<link rel="stylesheet" href="/assets/css/plugins.css">
+<link rel="stylesheet" href="/assets/css/app.css">
+<link rel="stylesheet" href="/assets/css/theme-colors/orange.css" id="style_color">
+
+<!-- CSS Customization -->
+<link rel="stylesheet" href="/assets/css/custom.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/idea.min.css">
+<!--fonts -->
+<link href='http://fonts.googleapis.com/css?family=Oxygen:700,400' rel='stylesheet' type='text/css'>
+
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-46289079-1', 'codurance.com');
+    ga('send', 'pageview');
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body>
+
+<div class="wrapper">
+<!--=== Header ===-->
+<div class="header-v3 header-sticky">
+        <!-- Navbar -->
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">
+                        <img id="logo-header" src="/assets/img/codurance.png" height="45px;" alt="Logo">
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-responsive-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/services">Services</a></li>
+                        <li><a href="/casestudies">Case Studies</a></li>
+                        <li><a href="/videos">Videos</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/careers/craftsman">Careers</a></li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">About Us <i class="icon-angle-down">&nbsp;</i></a><ul class="dropdown-menu">
+                            <li><a href="/aboutus/ourteam">Our Team</a></li>
+                            <li><a href="/aboutus/ourcompany">Our Company</a></li>
+                            <li><a href="/aboutus/ourpractices">Our Practices</a></li>
+                        </ul></li>
+                    </ul>
+                </div><!--/navbar-collapse-->
+            </div>    
+        </div>            
+        <!-- End Navbar -->
+    </div>
+    <!--=== End Header ===--> 
+<!--=== End Header ===-->
+
+
+    <div class="breadcrumbs margin-bottom-10">
+        <div class="container">
+            <h2 class="pull-left">Extract, Inject, Kill: Breaking hierarchies (part 2)</h2>
+            <ul class="pull-right breadcrumb">
+                <li><a href="/">Home</a></li>
+                
+                    <li>
+                    
+                        <a href="/blog">Blog</a>
+                    
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+
+<div class="container">
+<div class="row blog-page blog-item">
+<!-- Left Sidebar -->
+<div class="col-md-9 md-margin-bottom-60">
+    <!--Blog Post-->
+    <div class="blog margin-bottom-40">
+        
+        <div class="blog-post-tags">
+            <ul class="list-unstyled list-inline blog-info">
+                <li><i class="fa fa-calendar"></i> 06 Mar 2012</li>
+                <li><i class="fa fa-pencil"></i> Sandro Mancuso</li>
+                <li class="blog-share-buttons">
+                  <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+                  <script type="IN/Share"></script>
+
+                  <a class="twitter-share-button"
+                      href="https://twitter.com/intent/tweet?url=http://www.codurance.com/2012/03/06/extract-inject-kill-breaking_06/"
+                      data-count="none">
+                      Tweet</a>
+                </li>
+            </ul>
+        </div>
+        
+
+        
+
+        <p><em>In <a href="/2012/03/06/extract-inject-kill-breaking/">part 1</a>
+of this post I explain the problems of using the template method in deep
+class hierarchies and how I went to solve it. Please <a href="/2012/03/06/extract-inject-kill-breaking/">read
+it</a>
+before reading this post.</em></p>
+
+<p>Here is a more concrete example in how to break deep hierarchies using
+the Extract, Inject, Kill approach. Imagine the following hierarchy.</p>
+
+<p><img src="/assets/img/custom/blog/hierarchies.png" alt="Hierarchies" />
+Let's start with the StandardPricingService. First, let's write some
+tests:</p>
+
+<p>Note that I used  a small trick here, extending the
+StandardPricingService class inside the test class so I could have
+access to the protected method. We should not use this trick in
+normal circumstances. Remember that if you feel the need to test
+protected or private methods, it is because your design is not quite
+right, that means, there is a domain concept missing in your design. In
+other words, there is a class crying to come out from the class you are
+trying to test.</p>
+
+<p>Now, let's do the step one in our Extract, Inject, Kill strategy.
+<strong>Extract</strong> the content of the calculateProductPrice() method into
+another class called StandardPriceCalculation. This can be done
+automatically using IntelliJ or Eclipse. After a few minor adjusts,
+that's what we've got.</p>
+
+<p>And the StandardPriceService now looks like this:</p>
+
+<p>All your tests should still pass.</p>
+
+<p>As we create a new class, let's add some tests to it. They should be the
+same tests we had for the StandardPricingService.</p>
+
+<p>Great, one sibling done. Now let's do the same thing for the
+BoxingDayPricingService.</p>
+
+<p>Now let's extract the behaviour into another class. Let's call it
+BoxingDayPricingCalculation.</p>
+
+<p>The new BoxingDayPriceService is now</p>
+
+<p>We now need to add the tests for the new class.</p>
+
+<p>Now both StandardPricingService and BoxingDayPricingService have no
+implementation of their own. The only thing they do is to delegate the
+price calculation to StandardPriceCalculation and
+BoxingDayPriceCalculation respective. Both price calculation classes
+have the same public method, so now let's extract a PriceCalculation
+interface and make them both implement it.</p>
+
+<p>Awesome. We are now ready for the Inject part of Extract, Inject, Kill
+approach. We just need to <strong>inject</strong> the desired behaviour into the
+parent (class that defines the template method). The
+calculateProductPrice() is defined in the PricingService, the class at
+the very top at the hierarchy. That's where we want to inject the
+PriceCalculation implementation. Here is the new version:</p>
+
+<p>Note that the template method calculateProductPrice() was removed from
+the PricingService, since its behaviour is now being injected instead of
+implemented by sub-classes.</p>
+
+<p>As we are here, let's write some tests for this last change, checking if
+the PricingService is invoking the PriceCalculation correctly. </p>
+
+<p>Great. Now we are ready for the last bit of the Extract, Inject, Kill
+refactoring. Let's <strong>kill</strong> both StandardPricingService and
+BoxingDayPricingService child classes. </p>
+
+<p>The VoucherPricingService, now the deepest class in the hierarchy, can
+be promoted to concrete class. Let's have another look at the hierarchy:</p>
+
+<p><img src="/assets/img/custom/blog/hierarchies_2.png" alt="Hierarchies" />
+And that's it. Now it is just to repeat the same steps for
+VoucherPricingService and UserDiscountPricingService. <strong>Extract</strong> the
+implementation of their template methods into classes, <strong>inject</strong> them
+into PricingService, and <strong>kill</strong> the classes.</p>
+
+<p>In doing so, every time you extract a class, try to give them proper
+names instead of calling them Service. Suggestions could be
+VoucherDiscountCalculation and PrimeUserDiscountCalculation.</p>
+
+<p>There were a few un-safe steps in the re-factoring described above and I
+also struggled a little bit to describe exactly how I did it since I was
+playing quite a lot with the code. Suggestions and ideas are very
+welcome.</p>
+
+<p>For the <a href="/2012/03/26/extract-inject-kill-breaking_26/">final solution</a>,
+please check the <a href="/2012/03/26/extract-inject-kill-breaking_26/">last part</a>
+of this blog post.</p>
+
+<p><em>NOTE</em>
+<em>If you are not used to use builders in your tests and is asking
+yourself where the hell aProduct() and aShoppingBasket() come from,
+check the code in here:</em></p>
+
+<p><a href="https://gist.github.com/1988792">ProductBuilder.java</a></p>
+
+<p><a href="https://gist.github.com/1988805">ShoppingBasketBuilder.java</a></p>
+
+<p><em>For more information about the original problem that triggered all
+this, please read <a href="/2012/03/06/extract-inject-kill-breaking/">part 1</a>
+of this blog post.</em></p>
+
+<p><em>In <a href="/2012/03/26/extract-inject-kill-breaking_26/">part 3</a>
+I finish the exercise, breaking the entire hierarchy. Please have a look
+at it for the <a href="/2012/03/26/extract-inject-kill-breaking_26/">final solution</a>.</em></p>
+
+
+        
+    </div>
+    <!--End Blog Post-->
+</div>
+<!-- End Left Sidebar -->
+
+<!-- Right Sidebar -->
+<div class="col-md-3 magazine-page">
+    <!-- Blog Latest Tweets -->
+    <div class="blog-twitter margin-bottom-30">
+        <a class="twitter-timeline" href="https://twitter.com/mashooq/codurance" data-widget-id="400789734676385792">Tweets from Codurance team</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<script>window.twttr = (function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0],t = window.twttr || {};if (d.getElementById(id)) return t;js = d.createElement(s);js.id = id;js.src = "https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js, fjs);t._e = [];t.ready = function(f) {t._e.push(f);};return t;}(document, "script", "twitter-wjs"));</script>
+    </div>
+    <!-- End Blog Latest Tweets -->
+</div>
+<!-- End Right Sidebar -->
+</div>
+<!--/row-->
+</div>
+<!--/container-->
+
+
+<!--=== Copyright ===-->
+<div class="footer-default">
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <p class="copyright-space">
+                         Company Registration No: 8712584
+                         | Contact us: <a href="mailto:hello@codurance.com" class="">hello@codurance.com</a>
+                         | Phone: +44 203 440 4015
+                    </p>
+
+                </div>
+                <div class="col-md-4">
+                    <ul class="social-icons pull-right">
+                        <li><a href="/atom.xml" data-original-title="Feed" class="social_rss"></a></li>
+                        <li><a href="http://twitter.com/codurance" data-original-title="Twitter" class="social_twitter"></a></li>
+                    </ul>
+                </div>
+            </div> <!--/row-->
+        </div> <!--/container-->
+    </div><!--/copyright-->
+</div>
+
+<!--=== End Copyright ===-->
+</div>
+
+<!-- JS Global Compulsory -->
+<script type="text/javascript" src="/assets/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/assets/plugins/jquery/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/assets/plugins/back-to-top.js"></script>
+<!-- JS Implementing Plugins -->
+<script type="text/javascript" src="/assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+<script type="text/javascript" src="/assets/plugins/gmap/gmap.js"></script>
+<!-- JS Customization -->
+<script type="text/javascript" src="/assets/js/custom.js"></script>
+<!-- JS Page Level -->
+<script type="text/javascript" src="/assets/js/app.js"></script>
+<script type="text/javascript" src="/assets/js/pages/index.js"></script>
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        App.init();
+        Index.initOwlCarousel();
+        Contact.initMap();
+    });
+</script>
+<!--[if lt IE 9]>
+    <script src="/assets/plugins/respond.js"></script>
+    <script src="/assets/plugins/html5shiv.js"></script> 
+    <script src="/assets/js/plugins/placeholder-IE-fixes.js"></script>   
+<![endif]-->
+
+</body>
+</html>
