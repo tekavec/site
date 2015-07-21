@@ -3,7 +3,7 @@
     <title>Codurance</title>
     <link href="/atom.xml" rel="self"/>
     <link href=""/>
-    <updated>2015-07-20T15:07:26+00:00</updated>
+    <updated>2015-07-21T20:03:54+00:00</updated>
     <id>http://codurance.com</id>
     <author>
         <name>Codurance</name>
@@ -17,7 +17,7 @@
         <link href="http://codurance.com/2015/07/18/cqrs-and-event-sourcing-for-dummies/"/>
         <published>2015-07-18T17:00:00+00:00</published>
         
-        <summary type="html">&lt;p&gt;CQRS (Command and Query Responsibility Segregation) and Event Sourcing are concepts that are not new at all. Alongside NoSql, Functional Programming and Microservices, these revival concepts are getting traction because of their ability to deal with modern software challenges. Assuming that you&#39;re building a product that has a complex domain with a significant amount of users I can predict that if you follow more traditional architectural styles you will face the following problems &amp;em; how to scale and how to deal with complexity.&lt;/p&gt;
+        <summary type="html">&lt;p&gt;CQRS (Command and Query Responsibility Segregation) and Event Sourcing are concepts that are not new at all. Alongside NoSql, Functional Programming and Microservices, these revival concepts are getting traction because of their ability to deal with modern software challenges. Assuming that you&#39;re building a product that has a complex domain with a significant amount of users I can predict that if you follow more traditional architectural styles you will face the following problems how to scale and how to deal with complexity.&lt;/p&gt;
 
 </summary>
         
