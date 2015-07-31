@@ -3,13 +3,25 @@
     <title>Codurance</title>
     <link href="/atom.xml" rel="self"/>
     <link href=""/>
-    <updated>2015-07-29T23:44:14+00:00</updated>
+    <updated>2015-07-31T14:49:41+00:00</updated>
     <id>http://codurance.com</id>
     <author>
         <name>Codurance</name>
         <email>hello@codurance.com</email>
     </author>
     <rights>Copyright (c) Codurance</rights>
+    
+    <entry>
+        <id>/2015/07/31/a-month-of-apprenticeship/</id>
+        <title>My first month as an apprentice</title>
+        <link href="http://codurance.com/2015/07/31/a-month-of-apprenticeship/"/>
+        <published>2015-07-31T16:00:00+00:00</published>
+        
+        <summary type="html">&lt;p&gt;About a month ago, I started my apprenticeship at Codurance. I have learned a lot already in these few weeks, and I want to share some of it.&lt;/p&gt;
+
+</summary>
+        
+    </entry>
     
     <entry>
         <id>/2015/07/18/cqrs-and-event-sourcing-for-dummies/</id>
@@ -175,18 +187,6 @@ I passed by all the checks Github does to make sure you know what you&#39;re doi
         <published>2015-05-12T14:32:00+00:00</published>
         
         <summary type="html">&lt;p&gt;Recently I tweeted that &lt;a href=&quot;https://twitter.com/sandromancuso/status/588503877235781632&quot;&gt;TDD can’t lead to a good design if we don’t know what good design looks like&lt;/a&gt;. I was also saying that we probably should teach design before TDD (or at least, at the same time). This tweet led to a discussions with &lt;a href=&quot;https://twitter.com/jbrains&quot;&gt;J.B. Rainsberger&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/RonJeffries&quot;&gt;Ron Jeffries&lt;/a&gt;, and a few others. J.B. and I ended up having a live &lt;a href=&quot;https://www.youtube.com/watch?v=ty3p5VDcoOI&quot;&gt;discussion on Hangout on Air&lt;/a&gt; later on.&lt;/p&gt;
-
-</summary>
-        
-    </entry>
-    
-    <entry>
-        <id>/2015/05/06/interview-with-sandro-mancuso/</id>
-        <title>Q&amp;A about The Software Craftsman</title>
-        <link href="http://codurance.com/2015/05/06/interview-with-sandro-mancuso/"/>
-        <published>2015-05-06T01:26:00+00:00</published>
-        
-        <summary type="html">&lt;p&gt;&lt;em&gt;Our co-founder &lt;a href=&quot;http://twitter.com/sandromancuso&quot;&gt;Sandro Mancuso&lt;/a&gt; was &lt;a href=&quot;http://www.infoq.com/articles/mancuso-software-craftsman&quot;&gt;interviewed by Ben Linders from InfoQ&lt;/a&gt;. Below is the full transcript.&lt;/em&gt;&lt;/p&gt;
 
 </summary>
         
