@@ -3,13 +3,25 @@
     <title>Codurance</title>
     <link href="/atom.xml" rel="self"/>
     <link href=""/>
-    <updated>2015-08-05T12:56:58+00:00</updated>
+    <updated>2015-08-05T21:14:55+00:00</updated>
     <id>http://codurance.com</id>
     <author>
         <name>Codurance</name>
         <email>hello@codurance.com</email>
     </author>
     <rights>Copyright (c) Codurance</rights>
+    
+    <entry>
+        <id>/2015/08/05/becoming-evergreen/</id>
+        <title>Becoming Evergreen</title>
+        <link href="http://codurance.com/2015/08/05/becoming-evergreen/"/>
+        <published>2015-08-05T20:00:00+00:00</published>
+        
+        <summary type="html">&lt;blockquote&gt;&lt;p&gt;“It is only when the cold season comes that we know the Pine and Cypress to be evergreens.” - &lt;em&gt;Chinese Proverb&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
+
+</summary>
+        
+    </entry>
     
     <entry>
         <id>/2015/08/05/Why-you-should-always-follow-your-dreams/</id>
@@ -175,18 +187,6 @@ I passed by all the checks Github does to make sure you know what you&#39;re doi
         <published>2015-05-19T13:00:00+00:00</published>
         
         <summary type="html">&lt;p&gt;If you spend any time designing applications which use third-party platforms and services, you will have spent time considering Service Level Agreements (SLAs). The &lt;em&gt;tl;dr&lt;/em&gt; part of any SLA, the bit the everyone is actually interested in, is the uptime guarantee. However, this seemingly simple number has some hidden meanings that you should be aware of when designing applications and reporting your SLAs to customers.&lt;/p&gt;
-
-</summary>
-        
-    </entry>
-    
-    <entry>
-        <id>/2015/05/18/applying-transformation-priority-premise-to-roman-numerals-kata/</id>
-        <title>Applying Transformation Priority Premise to Roman Numerals Kata</title>
-        <link href="http://codurance.com/2015/05/18/applying-transformation-priority-premise-to-roman-numerals-kata/"/>
-        <published>2015-05-18T17:00:00+00:00</published>
-        
-        <summary type="html">&lt;h1&gt;Applying Transformation Priority Premise to Roman Numerals Kata&lt;/h1&gt;
 
 </summary>
         
