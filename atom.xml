@@ -3,13 +3,25 @@
     <title>Codurance</title>
     <link href="/atom.xml" rel="self"/>
     <link href=""/>
-    <updated>2015-08-01T20:11:29+00:00</updated>
+    <updated>2015-08-05T12:56:58+00:00</updated>
     <id>http://codurance.com</id>
     <author>
         <name>Codurance</name>
         <email>hello@codurance.com</email>
     </author>
     <rights>Copyright (c) Codurance</rights>
+    
+    <entry>
+        <id>/2015/08/05/Why-you-should-always-follow-your-dreams/</id>
+        <title>Why you should always follow your dreams!</title>
+        <link href="http://codurance.com/2015/08/05/Why-you-should-always-follow-your-dreams/"/>
+        <published>2015-08-05T13:00:00+00:00</published>
+        
+        <summary type="html">&lt;p&gt;I started at &lt;a href=&quot;http://codurance.com/&quot;&gt;Codurance&lt;/a&gt; a month and a half ago as a C# developer. I was glad to have the opportunity to work in a place where people value your effort to be a better developer.&lt;/p&gt;
+
+</summary>
+        
+    </entry>
     
     <entry>
         <id>/2015/07/31/a-month-of-apprenticeship/</id>
@@ -175,18 +187,6 @@ I passed by all the checks Github does to make sure you know what you&#39;re doi
         <published>2015-05-18T17:00:00+00:00</published>
         
         <summary type="html">&lt;h1&gt;Applying Transformation Priority Premise to Roman Numerals Kata&lt;/h1&gt;
-
-</summary>
-        
-    </entry>
-    
-    <entry>
-        <id>/2015/05/12/does-tdd-lead-to-good-design/</id>
-        <title>Does TDD really lead to good design?</title>
-        <link href="http://codurance.com/2015/05/12/does-tdd-lead-to-good-design/"/>
-        <published>2015-05-12T14:32:00+00:00</published>
-        
-        <summary type="html">&lt;p&gt;Recently I tweeted that &lt;a href=&quot;https://twitter.com/sandromancuso/status/588503877235781632&quot;&gt;TDD can’t lead to a good design if we don’t know what good design looks like&lt;/a&gt;. I was also saying that we probably should teach design before TDD (or at least, at the same time). This tweet led to a discussions with &lt;a href=&quot;https://twitter.com/jbrains&quot;&gt;J.B. Rainsberger&lt;/a&gt;, &lt;a href=&quot;https://twitter.com/RonJeffries&quot;&gt;Ron Jeffries&lt;/a&gt;, and a few others. J.B. and I ended up having a live &lt;a href=&quot;https://www.youtube.com/watch?v=ty3p5VDcoOI&quot;&gt;discussion on Hangout on Air&lt;/a&gt; later on.&lt;/p&gt;
 
 </summary>
         
