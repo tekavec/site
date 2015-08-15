@@ -3,13 +3,25 @@
     <title>Codurance</title>
     <link href="/atom.xml" rel="self"/>
     <link href=""/>
-    <updated>2015-08-13T10:37:30+00:00</updated>
+    <updated>2015-08-15T14:08:07+00:00</updated>
     <id>http://codurance.com</id>
     <author>
         <name>Codurance</name>
         <email>hello@codurance.com</email>
     </author>
     <rights>Copyright (c) Codurance</rights>
+    
+    <entry>
+        <id>/2015/08/15/appropriate-rigour/</id>
+        <title>Appropriate Rigour</title>
+        <link href="http://codurance.com/2015/08/15/appropriate-rigour/"/>
+        <published>2015-08-15T20:00:00+00:00</published>
+        
+        <summary type="html">&lt;p&gt;There are many metaphors to software development that make sense within different contexts but not others. When we talk about craftsmanship as a metaphor we are referring to the attitudes that the craftsman embodies in terms of dedication to customer satisfaction, quality and endless pursuit of excellence. Metaphors are a wonderful aid to comprehension where we can lift desired qualities from a well understood concept and use that to explain a new one. However, we must be careful on how we apply the metaphors.&lt;/p&gt;
+
+</summary>
+        
+    </entry>
     
     <entry>
         <id>/2015/08/05/becoming-evergreen/</id>
@@ -175,18 +187,6 @@ I passed by all the checks Github does to make sure you know what you&#39;re doi
         <published>2015-06-04T08:00:00+00:00</published>
         
         <summary type="html">&lt;p&gt;Together, &lt;a href=&quot;https://twitter.com/stevelydford&quot;&gt;Steve Lydford&lt;/a&gt; and I came up with a way to work that we don&#39;t think has been put to paper before.&lt;/p&gt;
-
-</summary>
-        
-    </entry>
-    
-    <entry>
-        <id>/2015/05/19/working-with-slas/</id>
-        <title>Working with SLAs</title>
-        <link href="http://codurance.com/2015/05/19/working-with-slas/"/>
-        <published>2015-05-19T13:00:00+00:00</published>
-        
-        <summary type="html">&lt;p&gt;If you spend any time designing applications which use third-party platforms and services, you will have spent time considering Service Level Agreements (SLAs). The &lt;em&gt;tl;dr&lt;/em&gt; part of any SLA, the bit the everyone is actually interested in, is the uptime guarantee. However, this seemingly simple number has some hidden meanings that you should be aware of when designing applications and reporting your SLAs to customers.&lt;/p&gt;
 
 </summary>
         
