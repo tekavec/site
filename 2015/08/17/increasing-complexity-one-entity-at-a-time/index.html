@@ -143,7 +143,7 @@
             <img class="img-responsive thumbnail blog-post-image" src="/assets/img/custom/blog/2015-08-17-increasing-complexity.jpg" alt="Increasing complexity one entity at a time">
         
 
-        <p>While working on one of our internal tools, I decided to make a small comprise and not follow my own advices. We are building a mini CRM tool and the initial requirements were:</p>
+        <p>While working on one of our internal tools, I decided to make a small comprise and not follow my own advice. We are building a mini CRM tool and the initial requirements were:</p>
 
 <ul>
 <li>Maintain information about the companies we are dealing with;</li>
@@ -162,7 +162,7 @@
 }
 </code></pre>
 
-<p>That was all well and good. Then I needed write code for maintaining a list of contacts for each company. I ended up with the following:</p>
+<p>That was all well and good. Then I needed to write code in order to maintain a list of contacts for each company. I ended up with the following:</p>
 
 <pre><code class="java">class Contact {
      + id: ContactId;
@@ -201,15 +201,15 @@ class Company {
 
 <p>At this point, things got very confusing. I had pages that needed Company and its contacts and engagements. Pages that only needed Company and Engagements, pages that only needed Company and Contacts. But the problems were not only related to what to load and where. I had loads of code that was relying on the Company structure.</p>
 
-<p>The application is a web app using AngularJS in the front with JSON going to the browser and back into the application. For that, I had JSON converters that would convert JSON to and from objects. I also had quiet a lot of tests for my API and inner layers which would use builders to assemble data. In summary, there was quite a lot of code that, in order to satisfy all the features, would relay on the structure of the Company entity. This code “had to know” when contacts and engagements were loaded or not. And of course, that was constantly changing while we were deciding how much information we needed on each page.</p>
+<p>The application is a web app using AngularJS in the front with JSON going to the browser and back into the application. For that, I had JSON converters that would convert JSON to and from objects. I also had quite a lot of tests for my API and inner layers which would use builders to assemble data. In summary, there was quite a lot of code that, in order to satisfy all the features, would rely on the structure of the Company entity. This code “had to know” when contacts and engagements were loaded or not. And of course, that was constantly changing while we were deciding how much information we needed on each page.</p>
 
-<p>As features stabilised and some changes in the code, everything was working.</p>
+<p>As features stabilised and I made a few more changes in the code, everything was working.</p>
 
 <h3>The ripple effect</h3>
 
 <p>As we thought we were ready to start building other features (dashboard, financial information, forecasts, notes, reminders, follow up actions, etc), we realised we missed something important.</p>
 
-<p>Some of our projects come through partners (other companies). That means that an engagement may have more than one company involved. This could make the relationship between Company and Engagements a bit different. Maybe the relationship between Company and Engagements wouldn’t be a one to many anymore. It would probably be a many to many.</p>
+<p>Some of our projects come through partners (other companies). That means that an engagement may have more than one company involved. This could make the relationship between Company and Engagements a bit different. Maybe the relationship between Company and Engagements wouldn’t be a <em>one to many</em> anymore. It would probably be a <em>many to many</em>.</p>
 
 <pre><code class="java">class Engagement {
      + id: EngagementId;
@@ -230,9 +230,9 @@ class Company {
 
 <p>I thought that it would be an easy change but I was surprised to see the massive ripple effect that it had in my code. Loads of test data, builders, JSON parsers, and API structure would be impacted and that was not a good feeling. I was really disappointed with myself and quite pissed off to be honest.</p>
 
-<h3>Following my own advices</h3>
+<h3>Following my own advice</h3>
 
-<p>Quite a few years ago I came across <a href="https://en.wikipedia.org/wiki/Command%E2%80%93query_separation">CQS</a> and later on <a href="http://www.cqrsinfo.com/">CQRS</a>. At the beginning I didn’t give CQS much attention and it was only with CQRS that I actually understood a different way to design software. Since then, I’ve been a strong advocate in separating the data structures (and yes, I treat entities as data structures) I use to write from the ones I use to read. I’m not talking about independently deployable read/write models, separate databases, events, messages, etc. I’m only talking about using some objects to write data and different objects to read data when they are not the same as the ones we used to write.</p>
+<p>A few years ago I came across <a href="https://en.wikipedia.org/wiki/Command%E2%80%93query_separation">CQS</a> and later on <a href="http://www.cqrsinfo.com/">CQRS</a>. At the beginning I didn’t give CQS much attention and it was only with CQRS that I actually understood a different way to design software. Since then, I’ve been a strong advocate of separating the data structures (and yes, I treat entities as data structures) I use to write from the ones I use to read. I’m not talking about independently deployable read/write models, different databases, events, messages, etc. I’m only talking about using different objects to write and read data.</p>
 
 <h3>Fixing the problem (1st solution)</h3>
 
@@ -287,7 +287,7 @@ class EngagementWithCompanies {
 
 <h3>Fixing the problem (2nd solution)</h3>
 
-<p>After the fix above, I was reasonably happy since I was able to localise changes when entities relationships changed. But there were a bit more to it. On the positive side, they allowed me to make a single call from a page that needed a combination of data. On the negative side, performance was not a real concern for me and I didn’t want this extra objects with weird names hanging around. I still had to write code to populate them and convert them to JSON.</p>
+<p>After the fix above, I was reasonably happy since I was able to localise changes when entities relationships changed. But there was a bit more to it. On the positive side, they allowed me to make a single call from a page that needed a combination of data. On the negative side, performance was not a real concern for me and I didn’t want this extra objects with weird names hanging around. I still had to write code to populate them and convert them to JSON.</p>
 
 <p>I then decided to make multiple calls from my pages. If a page needed a company, a list of contacts and a list of engagements related to that company, I would make three calls from the page. This decision made all the  “read” objects go away and still kept my code very simple.</p>
 

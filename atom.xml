@@ -3,7 +3,7 @@
     <title>Codurance</title>
     <link href="/atom.xml" rel="self"/>
     <link href=""/>
-    <updated>2015-08-17T10:35:09+00:00</updated>
+    <updated>2015-08-17T10:47:44+00:00</updated>
     <id>http://codurance.com</id>
     <author>
         <name>Codurance</name>
@@ -17,7 +17,7 @@
         <link href="http://codurance.com/2015/08/17/increasing-complexity-one-entity-at-a-time/"/>
         <published>2015-08-17T09:35:00+00:00</published>
         
-        <summary type="html">&lt;p&gt;While working on one of our internal tools, I decided to make a small comprise and not follow my own advices. We are building a mini CRM tool and the initial requirements were:&lt;/p&gt;
+        <summary type="html">&lt;p&gt;While working on one of our internal tools, I decided to make a small comprise and not follow my own advice. We are building a mini CRM tool and the initial requirements were:&lt;/p&gt;
 
 </summary>
         
