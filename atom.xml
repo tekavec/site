@@ -3,13 +3,25 @@
     <title>Codurance</title>
     <link href="/atom.xml" rel="self"/>
     <link href=""/>
-    <updated>2015-08-15T14:08:07+00:00</updated>
+    <updated>2015-08-17T10:35:09+00:00</updated>
     <id>http://codurance.com</id>
     <author>
         <name>Codurance</name>
         <email>hello@codurance.com</email>
     </author>
     <rights>Copyright (c) Codurance</rights>
+    
+    <entry>
+        <id>/2015/08/17/increasing-complexity-one-entity-at-a-time/</id>
+        <title>Increasing complexity one entity at a time</title>
+        <link href="http://codurance.com/2015/08/17/increasing-complexity-one-entity-at-a-time/"/>
+        <published>2015-08-17T09:35:00+00:00</published>
+        
+        <summary type="html">&lt;p&gt;While working on one of our internal tools, I decided to make a small comprise and not follow my own advices. We are building a mini CRM tool and the initial requirements were:&lt;/p&gt;
+
+</summary>
+        
+    </entry>
     
     <entry>
         <id>/2015/08/15/appropriate-rigour/</id>
@@ -175,18 +187,6 @@ I passed by all the checks Github does to make sure you know what you&#39;re doi
         <published>2015-06-07T18:00:00+00:00</published>
         
         <summary type="html">&lt;p&gt;OK, brain dump time.&lt;/p&gt;
-
-</summary>
-        
-    </entry>
-    
-    <entry>
-        <id>/2015/06/04/crank-up-the-volume/</id>
-        <title>Crank Up The Volume And Forget Your Pomodoros</title>
-        <link href="http://codurance.com/2015/06/04/crank-up-the-volume/"/>
-        <published>2015-06-04T08:00:00+00:00</published>
-        
-        <summary type="html">&lt;p&gt;Together, &lt;a href=&quot;https://twitter.com/stevelydford&quot;&gt;Steve Lydford&lt;/a&gt; and I came up with a way to work that we don&#39;t think has been put to paper before.&lt;/p&gt;
 
 </summary>
         
