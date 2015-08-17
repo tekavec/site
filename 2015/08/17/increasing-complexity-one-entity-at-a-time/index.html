@@ -236,7 +236,7 @@ class Company {
 
 <h3>Fixing the problem (1st solution)</h3>
 
-<p>After another discussion, we decided that an Engagement would always be for a Company and it may have come to us through a partner. That changed things again. So, I decided to do the following: remove all the dependencies (attributes containing other entities or list of entities) from all the entities. Then ended up like that:</p>
+<p>After another discussion, we decided that an Engagement would always be for a Company but it may have come to us through a partner. That changed things again. So, I decided to do the following: remove all the dependencies (attributes containing other entities or list of entities) from all the entities. Then ended up like that:</p>
 
 <pre><code class="java">class Company {
      + id: CompanyId
