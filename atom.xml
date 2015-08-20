@@ -3,13 +3,25 @@
     <title>Codurance</title>
     <link href="/atom.xml" rel="self"/>
     <link href=""/>
-    <updated>2015-08-20T12:15:16+00:00</updated>
+    <updated>2015-08-20T13:30:50+00:00</updated>
     <id>http://codurance.com</id>
     <author>
         <name>Codurance</name>
         <email>hello@codurance.com</email>
     </author>
     <rights>Copyright (c) Codurance</rights>
+    
+    <entry>
+        <id>/2015/08/18/How-katas-can-help-you-learn/</id>
+        <title>How katas can help you learn</title>
+        <link href="http://codurance.com/2015/08/18/How-katas-can-help-you-learn/"/>
+        <published>2015-08-18T09:35:00+00:00</published>
+        
+        <summary type="html">&lt;p&gt;In the last couple of weeks I have spent my time doing katas to improve my Objective-C. As you may remember, I had an issue, &lt;a href=&quot;http://wp.me/p4i8Xl-7h&quot;&gt;that you can revisit here&lt;/a&gt;.&lt;/p&gt;
+
+</summary>
+        
+    </entry>
     
     <entry>
         <id>/2015/08/17/increasing-complexity-one-entity-at-a-time/</id>
@@ -175,18 +187,6 @@ I passed by all the checks Github does to make sure you know what you&#39;re doi
         <published>2015-06-13T10:00:00+00:00</published>
         
         <summary type="html">&lt;p&gt;Last weekend I was lucky enough to attend &lt;a href=&quot;http://socratesuk.org&quot;&gt;Socrates UK 2015&lt;/a&gt;, an annual international software craftsmanship gathering set in the scenic surroundings of Farnham, Oxfordshire. If you have not done so, I definitely recommend checkout out this conference, either in England or the other Socrates events taking place across Europe (Germany, Belgium, France ...).&lt;/p&gt;
-
-</summary>
-        
-    </entry>
-    
-    <entry>
-        <id>/2015/06/07/conversations-about-conversations-at-socrates-uk-2015/</id>
-        <title>Conversations About Conversations at SoCraTes UK 2015</title>
-        <link href="http://codurance.com/2015/06/07/conversations-about-conversations-at-socrates-uk-2015/"/>
-        <published>2015-06-07T18:00:00+00:00</published>
-        
-        <summary type="html">&lt;p&gt;OK, brain dump time.&lt;/p&gt;
 
 </summary>
         
