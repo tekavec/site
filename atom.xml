@@ -3,13 +3,29 @@
     <title>Codurance</title>
     <link href="/atom.xml" rel="self"/>
     <link href=""/>
-    <updated>2015-08-25T17:30:57+00:00</updated>
+    <updated>2015-08-26T22:22:16+00:00</updated>
     <id>http://codurance.com</id>
     <author>
         <name>Codurance</name>
         <email>hello@codurance.com</email>
     </author>
     <rights>Copyright (c) Codurance</rights>
+    
+    <entry>
+        <id>/2015/08/26/My-first-walking-skeleton/</id>
+        <title>My first walking skeleton</title>
+        <link href="http://codurance.com/2015/08/26/My-first-walking-skeleton/"/>
+        <published>2015-08-26T09:00:00+00:00</published>
+        
+        <summary type="html">&lt;blockquote&gt;A Walking Skeleton is a tiny implementation of the system that performs a small end-to-end function. It need not use the final architecture, but it should link together the main architectural components. The architecture and the functionality can then evolve in parallel.
+ &lt;footer&gt; &lt;cite&gt;&lt;a href=&quot;http://alistair.cockburn.us/index.php/Walking_skeleton&quot;&gt;Alistair Cockburn&lt;/a&gt;&lt;/cite&gt;&lt;/footer&gt;
+&lt;/blockquote&gt;
+
+
+
+</summary>
+        
+    </entry>
     
     <entry>
         <id>/2015/08/18/How-katas-can-help-you-learn/</id>
@@ -175,18 +191,6 @@ I passed by all the checks Github does to make sure you know what you&#39;re doi
         <published>2015-06-13T18:00:00+00:00</published>
         
         <summary type="html">&lt;p&gt;Big Data has been a hype for many years. I’ve seen a few “Big Data” projects start in the past with a lot of fanfare and promise.The promise has always been that “we will start getting a holistic picture of our departmental silos and gain numerous insights from our data that will help us get ahead of our competitors”. The promise was rarely, if ever, fulfilled and the “Big Data” team slowly faded into the rest of the melting pot that we call the “IT department” in most large enterprises.&lt;/p&gt;
-
-</summary>
-        
-    </entry>
-    
-    <entry>
-        <id>/2015/06/13/extreme-learning/</id>
-        <title>A really good way to make your learning more effective</title>
-        <link href="http://codurance.com/2015/06/13/extreme-learning/"/>
-        <published>2015-06-13T10:00:00+00:00</published>
-        
-        <summary type="html">&lt;p&gt;Last weekend I was lucky enough to attend &lt;a href=&quot;http://socratesuk.org&quot;&gt;Socrates UK 2015&lt;/a&gt;, an annual international software craftsmanship gathering set in the scenic surroundings of Farnham, Oxfordshire. If you have not done so, I definitely recommend checkout out this conference, either in England or the other Socrates events taking place across Europe (Germany, Belgium, France ...).&lt;/p&gt;
 
 </summary>
         
